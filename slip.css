@@ -9,7 +9,7 @@
   table-layout: fixed;
 }
 .salary-slip .head { margin: 10px; margin-bottom: 50px; width: 100%;}
-.salary-slip .companyName { text-align: right; font-size: 25px; font-weight: bold;}
+.salary-slip .companyName { text-align: right; font-size: 25px; font-weight: bold; padding: 10px; padding-top: 20px;}
 .salary-slip .salaryMonth {text-align: center;}
 .salary-slip .table-border-bottom {border-bottom: 1px solid;}
 .salary-slip .table-border-right {border-right: 1px solid; width: 100%; text-align: center;}
