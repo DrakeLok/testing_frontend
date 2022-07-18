@@ -1,3 +1,27 @@
+<?php 
+session_start();
+include 'config.php';
+$version = 0.2;
+$c=isset($_SESSION['c'])?$_SESSION['c']:(isset($_GET['c'])?$_GET['c']:'indigo');
+$page=isset($_SESSION['page'])?$_SESSION['page']:0;
+$num_perpage=5;
+$_SESSION['author'] = 'cahyadsn';
+$_SESSION['ver']    = sha1(rand());
+header('Expires: '.date('r'));
+header('Cache-Control: no-store, no-cache, must-revalidate');
+header('Cache-Control: post-check=0, pre-check=0', FALSE);
+header('Pragma: no-cache');
+if(!isset($_SESSION['data_mbti_test'])){
+	$query="SELECT * FROM mbti_test_statements";
+	$result=pg_query($query) or die('Query failed: ' . pg_last_error());
+	$data=array();
+	while($row=pg_fetch_array($result, null, PGSQL_ASSOC))
+		$data[]=$row;
+	$_SESSION['data_mbti_test']=$data;
+}else{
+	$data=$_SESSION['data_mbti_test'];
+}
+?>
 <!DOCTYPE html>
 <html><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="shortcut icon" type="image/ico" href="https://www.cooljobz.com/dbp/files/cooljobz/cooljobz_icon.png"><title>CoolJobz.com - Adding New Resume</title>
@@ -123,7 +147,7 @@
       
       <a href="javascript: toggle_menu('TOP', 'profile'); void(0);" class="w3-menu site-profile" id="site-menu-TOP-profile"><i class="fa fa-id-badge"></i> CHAN TAI MAN</a>
         <div name="site-submenu-TOP" id="site-submenu-TOP-profile" class="w3-small site-submenu-top" style="top: 61px;">
-          <div class="w3-hover-lime">
+          <!-- <div class="w3-hover-lime">
           <a href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&amp;template=801543530017" class="w3-menu site-profile"><i class="fa fa-user"></i> Edit Profile</a>
           <a href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&amp;template=801543530072&amp;params=NIL" class="w3-menu site-profile"><i class="fa fa-heart"></i> My Favourite</a>
       
@@ -133,8 +157,8 @@
          
       
           <a name="bar-appl" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&amp;template=801543530038&amp;params=NIL" class="w3-menu site-profile"><i class="fa fa-arrows-h"></i> Job Application</a>
-          </div>
-          <div name="bar-hrm" class="w3-hover-amber">
+          </div> -->
+          <!-- <div name="bar-hrm" class="w3-hover-amber">
       
       
           <a href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&amp;template=801543530061&amp;params=NIL" class="w3-menu-2 site-profile"><i class="fa fa-building"></i> My Employers</a>
@@ -146,7 +170,7 @@
           <a href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&amp;template=801543530066&amp;params=NIL,Flag~Payroll*Sand*SFlag*x~Disabled" class="w3-menu-2 site-profile"><i class="fa fa-money"></i> Payroll</a>
           <a href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&amp;template=801543530066&amp;params=NIL,Flag~Attendance*Sand*SFlag*x~Disabled" class="w3-menu-2 site-profile"><i class="fa fa-clock-o"></i> Attendance</a>
           <a href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&amp;template=801543530078&amp;dbname=site_Application&amp;key=NIL" class="w3-menu-2 site-profile"><i class="fa fa-calendar"></i> Schedule</a>
-          </div>
+          </div> -->
         </div>
       <a href="./rlogout" class="w3-menu"><i class="fa fa-sign-out"></i> Sign Out</a>
       
@@ -203,62 +227,81 @@
 <div class="w3-content w3-padding site-main" style="margin-top: 121px;">  
   <div class="w3-row-padding w3-margin-bottom">    
     <div class="w3-col l4 w3-left-align w3-margin-bottom w3-hide-small w3-hide-medium w3-center site-sticky" style="top: 137px;">      
-      <div class="site-resume-image" style="background-image: url(&quot;https://www.cooljobz.com/dbp/files/cooljobz/cooljobz_resume.png&quot;); width: 264px; height: 264px;" title="Adding New Resume">
+      <div class="site-resume-image" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmpz_GFCJj538JvUJ9jD5McaIq1zj2ywbBCw&usqp=CAU;); width: 264px; height: 264px;" title="Adding New Resume">
       </div>    
     </div>    
     <div class="w3-col l4 w3-left-align w3-margin-bottom w3-hide-large">      
       <div class="site-resume-image" style="background-image: url(&quot;https://www.cooljobz.com/dbp/files/cooljobz/cooljobz_resume.png&quot;); width: 0px; height: 0px;" title="Adding New Resume">
       </div>    
     </div>    
+
+    <!-- test_Tittle -->
     <div class="w3-col l8 w3-left-align w3-margin-bottom">      
-      <h2><i class="fa fa-id-badge"></i> Adding New Resume</h2>      
-      <div><form class="w3-small" name="db_edit_input" action="https://www.cooljobz.com/dbs/bsave?frmkey=8512262412143071377" method="post" onchange="onchange_resume();" onsubmit="cache_Submit();">
+      <h2><i class="fa fa-id-badge"></i> MBTI Test</h2>      
+    </div>
+
+
+    <!-- test_temp -->
+    <div class="w3-col l8 w3-left-align w3-margin-bottom">
+      <div><form class="w3-small" name="db_edit_input" action="result.php" method="post" id="mbti" novalidate>
+      <input type="hidden" id="page" value="0">
         <div class="w3-stretch w3-row-padding">
-          <div class="w3-col l4 m6 s12">
-            <div class="w3-row">  
-              <div class="w3-col doc_label">Last Name</div>  
-              <div class="w3-col doc_data">    
-                <input class="w3-input w3-border-black w3-border-bottom w3-animate-input doc_input" type="text" name="nval1" onfocus="if (nval1.value == '[Required]') { nval1.value = ''; }" onblur="if (nval1.value == '') { nval1.value = '[Required]'; }" value="[Required]">
+            <div class="w3-row">
+              <table class="w3-table w3-striped">
+                <thead>
+                <tr class="w3-theme-d3">
+                  <th>No</th>
+                  <th colspan='2'>Questions</th>
+                </tr>
+                </thead>
+                <tbody id='p0'>
+                <?php
+                $no=0;
+                foreach($data as $d){
+                  $c=rand()%2;
+                  echo "
+                  <tr style='border-top:solid 1px #999;'>
+                    <td rowspan='3' style='width:30px !important;'>".++$no."</td>
+                    <td colspan='2'>{$d['question']}</td>
+                  </tr>
+                  <tr>
+                    <td style='padding-left:16px !important;width:30px !important;' class='incomplete'><input type='radio' name='d[{$d['id']}]' value='1' class='w3-radio' ".(isset($_GET['auto'])?($c==0?'checked ':''):'')."required /></td>
+                    <td class='right'>{$d['statement1']}</td>
+                  </tr>
+                  <tr>					
+                    <td><input type='radio' name='d[{$d['id']}]' value='2' class='w3-radio' ".(isset($_GET['auto'])?($c==1?'checked ':''):'')."required /></td>
+                    <td>{$d['statement2']}</td>
+                  </tr>
+                     ";
+                  if($no%$num_perpage==0) {
+                  echo "</tbody><tbody style='display:none' id='p".round($no/$num_perpage)."'>";
+                  }
+                }
+                ?>
+                </tbody>
+              </table>
+            </div>
+            <h6>&nbsp;</h6>
+                <div class="w3-row w3-theme-l3">
+              <div class="w3-col s6 w3-padding">
+              <button class="w3-button w3-round-large w3-theme-d1 w3-margin-8 w3-disabled" id="btn_prev" disabled>previous</button>
+              <button class="w3-button w3-round-large w3-theme-d1 w3-margin-8" id="btn_next">next</button>
+                  </div>
+                  <div class="w3-col s6 w3-padding">
+                    <input type='submit' value='process' id='btn_send' class='w3-button w3-round-large w3-theme-d1 w3-right w3-margin-8 w3-disabled' disabled/>
               </div>
             </div>
-            <div class="w3-row">  
-              <div class="w3-col doc_label">First Name</div>  
-              <div class="w3-col doc_data">    
-                <input class="w3-input w3-border-black w3-border-bottom w3-animate-input doc_input" type="text" name="nval2" onfocus="if (nval2.value == '[Required]') { nval2.value = ''; }" onblur="if (nval2.value == '') { nval2.value = '[Required]'; }" value="[Required]">
-              </div>
-            </div>
-          </div>
+            <h6>&nbsp;</h6>
+                <h2>&nbsp;</h2> 
         </div>
       </div></form>
     </div>
+
+
+
   </div>
 </div>
 
-<div class="w3-stretch w3-row-padding w3-animate-right">
-  <hr>
-  <div class="w3-col l6">  
-    <div class="w3-medium">
-      <b>Experience</b>
-    </div>
-  </div>
-  <div class="w3-col">
-    <div class="w3-row" id="experience_list">
-      <div class="w3-responsive">  
-        <table class="w3-table">    
-          <tbody>
-            <tr class="w3-medium w3-theme-l4">      
-              <th class="doc_col_10">&nbsp;</th>      
-              <th class="doc_col_20 w3-left-align w3-hide-small w3-hide-medium">From - To</th>     
-              <th class="doc_col_45 w3-left-align w3-hide-small w3-hide-medium">Employer / Company / Position</th>      
-              <th class="doc_col_25 w3-right-align w3-hide-small w3-hide-medium">Salary</th>   
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>    
-  <!-- End page content -->
-</div>
 
 
 
