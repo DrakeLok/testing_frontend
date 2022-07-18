@@ -278,6 +278,7 @@ function bottomLoadMore() {
     <link rel="stylesheet" href="slip.css">
     </head>
   <body>
+    <input type="button" value="Download PDF" id="button" style="float: right; padding-bottom: 10px;" class="w3-amber w3-hover-amber w3-button w3-round-xxlarge w3-right w3-margin-bottom" class="fa fa-file" onclick="createPDF()" /> 
     <div class="salary-slip" id="sls">
       <table class="empDetail">
         <tr height="100px" style='background-color: #9ba5d6'>
@@ -540,11 +541,8 @@ function bottomLoadMore() {
       </table>
     
     </div>
-    <p>
-      <input type="button" value="Create PDF" 
-          id="btPrint" onclick="createPDF()" />
-  </p>
-    
+
+
   <script>
     function createPDF() {
         var sTable = document.getElementById('sls').innerHTML;
