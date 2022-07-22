@@ -1,27 +1,4 @@
-<?php 
-session_start();
-include 'config.php';
-$version = 0.2;
-$c=isset($_SESSION['c'])?$_SESSION['c']:(isset($_GET['c'])?$_GET['c']:'indigo');
-$page=isset($_SESSION['page'])?$_SESSION['page']:0;
-$num_perpage=5;
-$_SESSION['author'] = 'cahyadsn';
-$_SESSION['ver']    = sha1(rand());
-header('Expires: '.date('r'));
-header('Cache-Control: no-store, no-cache, must-revalidate');
-header('Cache-Control: post-check=0, pre-check=0', FALSE);
-header('Pragma: no-cache');
-if(!isset($_SESSION['data_mbti_test'])){
-	$query="SELECT * FROM mbti_test_statements";
-	$result=pg_query($query) or die('Query failed: ' . pg_last_error());
-	$data=array();
-	while($row=pg_fetch_array($result, null, PGSQL_ASSOC))
-		$data[]=$row;
-	$_SESSION['data_mbti_test']=$data;
-}else{
-	$data=$_SESSION['data_mbti_test'];
-}
-?>
+
 <!DOCTYPE html>
 <html><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="shortcut icon" type="image/ico" href="https://www.cooljobz.com/dbp/files/cooljobz/cooljobz_icon.png"><title>CoolJobz.com - Adding New Resume</title>
@@ -225,79 +202,104 @@ if(!isset($_SESSION['data_mbti_test'])){
 
 <!-- Page content -->
 <div class="w3-content w3-padding site-main" style="margin-top: 121px;">  
-  <div class="w3-row-padding w3-margin-bottom">    
-    <div class="w3-col l4 w3-left-align w3-margin-bottom w3-hide-small w3-hide-medium w3-center site-sticky" style="top: 137px;">      
-      <div class="site-resume-image" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmpz_GFCJj538JvUJ9jD5McaIq1zj2ywbBCw&usqp=CAU;); width: 264px; height: 264px;" title="Adding New Resume">
+  <div class="w3-row-padding w3-margin-bottom ">    
+    <div class="w3-col l4 w3-left-align w3-margin-bottom w3-hide-small w3-hide-medium w3-center site-sticky " style="top: 137px;">      
+      <div class="site-resume-image" style="background-image: url(https://rangeinn.com/wp-content/uploads/2021/06/infp-mediator.png;); width: 400px; height: 400px;" title="Adding New Resume">
       </div>    
-    </div>    
-    <div class="w3-col l4 w3-left-align w3-margin-bottom w3-hide-large">      
-      <div class="site-resume-image" style="background-image: url(&quot;https://www.cooljobz.com/dbp/files/cooljobz/cooljobz_resume.png&quot;); width: 0px; height: 0px;" title="Adding New Resume">
-      </div>    
-    </div>    
-
-    <!-- test_Tittle -->
+    </div>   
     <div class="w3-col l8 w3-left-align w3-margin-bottom">      
-      <h2><i class="fa fa-id-badge"></i> MBTI Test</h2>      
+        <h2><i class="fa fa-id-badge"></i> MBTI Result</h2> 
+        <div class="w3-container">
+            <!-- <h2>&nbsp;</h2> -->
+            <!-- <br> -->
+            <div class="w3-card-4 l8 w3-left-align w3-margin-bottom">
+                <h1 class='w3-padding w3-theme-d1'><?php echo $data['symbol'];?>  INFP</h1>
+                <h2 class='w3-theme-l2' style='padding-left:20px;'><em><?php echo $data['short'];?></em></h2>
+                <div class='w3-container'>
+                    <div class='result'>
+                        <b>Description</b><br/>
+                    </div>
+                    <div class='result'>
+                        <b>Jungian functional preference ordering:</b><br />
+                        <?php echo $data['ordering'];?>
+                    </div>
+                    </div>
+                    <h2 class='w3-theme-l3' style='padding-left:20px;'><?php echo $data['symbol'];?> Relationships</h2>
+                    <div class='w3-container'>
+                        <div class='result'>
+                            <?php echo $data['relationships'];?>
+                        </div>
+                        <div class='result'>
+                            <b><?php echo $data['symbol'];?> Strengths:</b><br />
+                            <?php echo $data['strengths'];?>
+                        </div>
+                        <div class='result'>
+                            <b><?php echo $data['symbol'];?> Weakness:</b><br />
+                            <?php echo $data['weakness'];?>
+                        </div>
+                        
+                    </div>
+                    <h2 class='w3-theme-l3' style='padding-left:20px;'><?php echo $data['symbol'];?> Personality Growth</h2>
+                    <div class='w3-container'>
+                        <div class='result'>
+                            <p>Perhaps the most important realization that an individual can make in their quest for personal growth is that there is no single formula that defines the path to personal success. We all have different goals and priorities, which means that different activities and attitudes will make us feel good about ourselves. We also have different natural strengths and weaknesses that are a part of our inherent personality type. How then, as individuals, can we feel successful in our lives?</p>
+                            <b>What does Success mean to an <?php echo $data['symbol'];?>?:</b><br />
+                            <?php echo $data['success_mean'];?>
+                        </div>
+                        <div class='result'>
+                            <b>Allowing Your <?php echo $data['symbol'];?> Strengths to Flourish:</b><br />
+                            <?php echo $data['flourish_strengths'];?>
+                        </div>
+                        <div class='result'>
+                            <b>Potential Problem Areas:</b><br />
+                            <?php echo $data['problems'];?>
+                        </div>
+                        <div class='result'>
+                            <b>Explanation of Problems:</b><br />
+                            <?php echo $data['problems_explanation'];?>
+                        </div>
+                        <div class='result'>
+                            <b>Solutions:</b><br />
+                            <?php echo $data['solutions'];?>
+                        </div>
+                        <div class='result'>
+                            <b>Living Happily in our World as an <?php echo $data['symbol'];?></b><br />
+                            <?php echo $data['living'];?>
+                        </div>
+                        <div class='result'>
+                            <b>Specific suggestions:</b><br />
+                            <?php echo $data['suggestions'];?>
+                        </div>
+                        <div class='result'>
+                            <b>Ten Rules to Live By to Achieve <?php echo $data['symbol'];?> Success</b><br />
+                            <?php echo $data['ten_rules'];?>
+                        </div>
+                    </div>
+                    <h2 class='w3-theme-l3' style='padding-left:20px;'>Careers for <?php echo $data['symbol'];?> Personality Type</h2>
+                    <div class='w3-container'>
+                        <p>Whether you're a young adult trying to find your place in the world, or a not-so-young adult trying to find out if you're moving along the right path, it's important to understand yourself and the personality traits that will impact your likeliness to succeed or fail at various careers. It's equally important to understand what is really important to you. When armed with an understanding of your strengths and weaknesses, and an awareness of what you truly value, you are in an excellent position to pick a career that you will find rewarding.</p>
+                        <div class='result'>
+                            <b><?php echo $data['symbol'];?>s generally have the following traits:</b><br />
+                            <?php echo $data['traits'];?>
+                        </div>
+                        <div class='result'>
+                            <b>Possible Career Paths for the <?php echo $data['symbol'];?></b><br />
+                            <?php echo $data['profession'];?>
+                        </div>
+                        <div class='result'>
+                            <b>Partner:</b><br />
+                            <?php echo $data['partner'];?>
+                        </div>
+                    </div>
+                    <h2>&nbsp;</h2>
+                </div>
+            </div>
+        </div>     
     </div>
 
 
-    <!-- test_temp -->
-    <div class="w3-col l8 w3-left-align w3-margin-bottom">
-      <div><form class="w3-small" name="db_edit_input" action="result.php" method="post" id="mbti">
-      <input type="hidden" id="page" value="0">
-        <div class="w3-stretch w3-row-padding">
-            <div class="w3-row">
-              <table class="w3-table w3-striped">
-                <thead>
-                <tr class="w3-theme-d3">
-                  <th>No</th>
-                  <th colspan='2'>Questions</th>
-                </tr>
-                </thead>
-                <tbody id='p0'>
-                <?php
-                $no=0;
-                foreach($data as $d){
-                  $c=rand()%2;
-                  echo "
-                  <tr style='border-top:solid 1px #999;'>
-                    <td rowspan='3' style='width:30px !important;'>".++$no."</td>
-                    <td colspan='2'>{$d['question']}</td>
-                  </tr>
-                  <tr>
-                    <td style='padding-left:16px !important;width:30px !important;' class='incomplete'><input type='radio' name='d[{$d['id']}]' value='1' class='w3-radio' ".(isset($_GET['auto'])?($c==0?'checked ':''):'')."required /></td>
-                    <td class='right'>{$d['statement1']}</td>
-                  </tr>
-                  <tr>					
-                    <td><input type='radio' name='d[{$d['id']}]' value='2' class='w3-radio' ".(isset($_GET['auto'])?($c==1?'checked ':''):'')."required /></td>
-                    <td>{$d['statement2']}</td>
-                  </tr>
-                     ";
-                  if($no%$num_perpage==0) {
-                  echo "</tbody><tbody style='display:none' id='p".round($no/$num_perpage)."'>";
-                  }
-                }
-                ?>
-                </tbody>
-              </table>
-            </div>
-            <h6>&nbsp;</h6>
-                <div class="w3-row w3-theme-l3">
-              <div class="w3-col s6 w3-padding">
-              <button class="w3-button w3-round-large w3-theme-d1 w3-margin-8 w3-disabled" id="btn_prev" disabled>previous</button>
-              <button class="w3-button w3-round-large w3-theme-d1 w3-margin-8" id="btn_next">next</button>
-                  </div>
-                  <div class="w3-col s6 w3-padding">
-                    <input type='submit' value='process' id='btn_send' class='w3-button w3-round-large w3-theme-d1 w3-right w3-margin-8 w3-disabled' disabled/>
-              </div>
-            </div>
-            <h6>&nbsp;</h6>
-                <h2>&nbsp;</h2> 
-        </div>
-      </div></form>
-    </div>
 
-
+    
 
   </div>
 </div>

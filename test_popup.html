@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="shortcut icon" type="image/ico" href="https://www.mindvan.com/dbp/files/cooljobz.test@mindvan.com/cooljobz_icon.png">
+
+<title>CoolJobz.com - All Jobs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="https://www.mindvan.com/dbp/css/ourdb-appage.css">
+    <link rel="stylesheet" href="https://www.mindvan.com/dbp/css/ourdb.css">
+    <link rel="stylesheet" href="https://www.mindvan.com/dbp/css/ourdb-w3.css">
+    <link rel="stylesheet" href="https://www.mindvan.com/dbp/fontawesome/v4.7.0/css/font-awesome.min.css">
+  
+   <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://www.mindvan.com/dbp/js/ourdb.js"></script>
+   <script src="https://www.mindvan.com/dbp/js/calendar.js"></script></head><body onbeforeunload="onoff_progress('on');" onload="onoff_progress('off'); set_frame_height(); detectLoadMore(); site_post_adjust();" onresize="site_post_adjust();" data-new-gr-c-s-check-loaded="9.40.0" data-gr-ext-installed=""><div class="ourdb-hidden ourdb-calendar" id="ourdb-calendar"></div>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
+<link rel="stylesheet" href="https://www.cooljobz.com/dbp/css/ourdb-w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.mindvan.com/dbp/files/cooljobz.test@mindvan.com/site_style.css">
+
+
+
+<script>
+var offsetPost = 8;
+var xmlHttpControl1;
+var redirecting = false;
+
+function detectLoadMore() {
+  window.addEventListener("scroll", bottomLoadMore);
+
+  var b = document.getElementById("site-loadmore");
+  if (b) {
+    if (offsetPost >= 1354) { b.style.display = "none"; }
+  }
+}
+
+function loadMorePosts() {
+  on_progress();
+  var url=
+    "https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&template=801543530032&params=AllJb,os2." + offsetPost;
+  xmlHttpControl1 = GetXmlHttpObject(appendPosts);
+  xmlHttpControl1.open("GET", url , true);
+  xmlHttpControl1.send(null);
+}
+
+function appendPosts() {
+  if (xmlHttpControl1.readyState == 4 || xmlHttpControl1.readyState == "complete") {
+    var contentHTML = xmlHttpControl1.responseText;
+    var cStart = contentHTML.indexOf('<!-- Posts start -->');
+    var eStart = contentHTML.indexOf('<!-- Posts end -->');
+    contentHTML = contentHTML.substring(cStart + 20, eStart);
+    document.getElementById("site-posts").innerHTML += contentHTML;
+    offsetPost += 8;
+    if (offsetPost >= 1354) {
+      document.getElementById("site-loadmore").style.display = "none"; }
+    site_post_adjust();
+    off_progress();
+    set_ajax_content("site-posts","site-loadmore",offsetPost);
+    redirecting = false;
+    window.removeEventListener("scroll", bottomLoadMore);
+    window.addEventListener("scroll", bottomLoadMore);
+  }
+}
+
+function bottomLoadMore() {
+  if (redirecting == true) { return false; }
+  var b = document.getElementById("site-loadmore");
+  if (b.getBoundingClientRect().top < window.innerHeight - 50 && redirecting == false) {
+    if (b.style.display != "none") {
+      redirecting = true;
+      loadMorePosts(); }
+  }
+}
+</script>
+
+    <!-- Facebook Pixel Code -->
+    <!-- <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=619195874874226&ev=PageView&noscript=1"
+    /> -->
+    <!-- End Facebook Pixel Code -->
+  
+
+    <div id="ourdb-progress" class="ourdb-progress ourdb-hidden">
+      <div class="ourdb-progress-content">
+        <i class="fa fa-spinner fa-spin w3-jumbo"></i>
+      </div>
+    </div>
+    <div id="ourdb-loading" class="ourdb-progress ourdb-hidden" style="background-color: rgba(0, 0, 0, 0.4);">
+      <div class="ourdb-progress-content">
+        <i class="fa fa-spinner fa-spin w3-jumbo"></i>
+      </div>
+    </div>
+    <div align="center" class="ourdb-hidden"><img src="../dbp/images/db_mindvan.jpg" border="0"></div>
+    <script>
+      var v = "appage-progress-color";
+      var i = document.cookie.indexOf(v);
+      if (i >= 0) {
+        var j = document.cookie.indexOf(";", i);
+        var c = document.cookie.substr(i+v.length+1, j-i-v.length-1);
+        document.getElementById("ourdb-progress").style.color = c;
+        document.getElementById("ourdb-loading").style.color = c;
+      }
+      v = "appage-background-color";
+      i = document.cookie.indexOf(v);
+      if (i >= 0) {
+        var j = document.cookie.indexOf(";", i);
+        var c = document.cookie.substr(i+v.length+1, j-i-v.length-1);
+        document.body.className = document.body.className.replace(" w3-theme-light", "").replace("w3-theme-light ", "").replace("w3-theme-light", "");
+        document.getElementById("ourdb-progress").style.backgroundColor = c;
+        document.getElementById("ourdb-loading").style.backgroundColor = c;
+      }
+    </script>
+  
+      <div id="appage_menu" class="ourdb-app-menu-icon w3-animate-zoom">
+        <a class="w3-button w3-light-grey w3-opacity w3-circle ourdb-app-menu-item" onclick="ourdb_menu_open();">
+          <i class="fa fa-ellipsis-h ourdb-app-menu-txt"></i>
+        </a>
+        <div class="w3-animate-top w3-small w3-text-black ourdb-hidden ourdb-sn-bar" id="ourdb-powered">
+          Powered by mindVan <a class="ourdb-powered w3-margin-right" target="_blank" href="https://mindvan.com">ourDB</a>
+          <a target="_blank" href="https://www.facebook.com/mindvan"><i class="fa fa-facebook-official w3-large w3-text-indigo w3-hover-opacity"></i></a>
+          <a target="_blank" href="https://www.instagram.com/mindvan.connection"><i class="fa fa-instagram w3-large w3-text-pink w3-hover-opacity"></i></a>
+          <a target="_blank" href="https://www.youtube.com/user/mindvanconnection"><i class="fa fa-youtube w3-large w3-text-red w3-hover-opacity"></i></a>
+          <a target="_blank" href="https://twitter.com/mindvan"><i class="fa fa-twitter w3-large w3-text-blue w3-hover-opacity"></i></a>
+        </div>
+      </div>
+    
+      
+      <div class="w3-sidebar w3-theme-l3 w3-animate-left ourdb-hidden ourdb-sidebar ourdb-app-menu-body" id="ourdb-sidebar"><br>
+        <div class="w3-bar-block w3-margin-bottom">
+          <div class="ourdb-navbar w3-animate-top w3-hide"><a class="w3-bar-item w3-button w3-padding" target="_blank" href="./rlogin"><i class="fa fa-user-o w3-margin-right"></i>Login As...</a>
+<a class="w3-bar-item w3-button w3-padding" target="_blank" href="./rforget"><i class="fa fa-question w3-margin-right"></i>Forget Password</a>
+<a class="w3-bar-item w3-button w3-padding" target="_blank" href="https://www.mindvan.com/dbs/radd"><i class="fa fa-pencil-square-o w3-margin-right"></i>Register</a>
+</div><div class="ourdb-navbar w3-animate-top w3-hide"><a class="w3-bar-item w3-button w3-padding" href='javascript: window.location="./rshare?caller=/dbs/bdetail&title=" + qry_escape(document.title) + "&params=share*qcooljobz*dtest*amindvan*dcom*ntemplate*q801543530031*nparams*qAllJb&addmode=1"; void(0);'><i class="fa fa-share-alt w3-margin-right"></i>Share</a>
+<a class="w3-bar-item w3-button w3-padding" target="_blank" href="https://www.mindvan.com/dbs/bdetail?template=269928100018&amp;share=mindvan.connection"><i class="fa fa-university w3-margin-right"></i>mindvan.com</a>
+<a class="w3-bar-item w3-button w3-padding" href="javascript: history.go(-1);"><i class="fa fa-undo w3-margin-right"></i>Go Back</a>
+</div><div class="ourdb-navbar w3-animate-top"><a class="w3-bar-item w3-button w3-padding" href='javascript: window.location="./rshare?caller=/dbs/bdetail&title=" + qry_escape(document.title) + "&params=share*qcooljobz*dtest*amindvan*dcom*ntemplate*q801543530031*nparams*qAllJb&addmode=1"; void(0);'><i class="fa fa-share-alt w3-margin-right"></i>Share</a>
+<a class="w3-bar-item w3-button w3-padding" target="_blank" href="https://www.mindvan.com/dbs/bdetail?template=269928100018&amp;share=mindvan.connection"><i class="fa fa-university w3-margin-right"></i>mindvan.com</a>
+<a class="w3-bar-item w3-button w3-padding" href="javascript: history.go(-1);"><i class="fa fa-undo w3-margin-right"></i>Go Back</a>
+</div><a class="w3-bar-item w3-button w3-padding ourdb-navbar" onclick="display_fullmenu();">Full Menu</a>
+<div class="w3-row">&nbsp;</div>
+<div class="w3-row">&nbsp;</div>
+
+        </div>
+      </div>
+    
+      <div class="w3-overlay w3-animate-opacity ourdb-hidden ourdb-app-link ourdb-app-menu-overlay" onclick="ourdb_menu_close()" title="close side menu" id="ourdb-overlay"></div>
+    
+   
+
+
+
+
+<script>var utype;</script>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white">
+    <a href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;template=801543530001" class="w3-bar-item"><img src="https://www.mindvan.com/dbp/images/cooljobz.test@mindvan.com/cooljobz_logo.png" class="site-bar-item"></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small w3-hide-medium">
+      <a id="site-menu-TOP-10" href="javascript: toggle_menu('TOP', '10'); void(0);" class="w3-menu  ">Jobs</a><div name="site-submenu-TOP" id="site-submenu-TOP-10" class="w3-small w3-hide site-submenu-top"><a id="site-menu-TOP-All-10" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;template=801543530031&amp;params=AllJb" class="w3-menu ">List All</a>   <a id="site-menu-TOP-3" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=3&amp;params=Job" class="w3-menu  ">Recommended Job</a>                     <a id="site-menu-TOP-88742272048107" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=88742272048107&amp;params=Job" class="w3-menu  ">Accounting and auditing</a>                     <a id="site-menu-TOP-88742272066741" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=88742272066741&amp;params=Job" class="w3-menu  ">Administration and Human Resources</a>                     <a id="site-menu-TOP-88742272123644" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=88742272123644&amp;params=Job" class="w3-menu  ">Banking / Finance</a>                     <a id="site-menu-TOP-11" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=11&amp;params=Job" class="w3-menu  ">Information Technology</a>                     <a id="site-menu-TOP-88742273081620" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=88742273081620&amp;params=Job" class="w3-menu  ">Sales / Customer Service / Business Development</a>                     <select class="site-select" onchange="switch_category_option(this.value,'Job');" id="select-TOP-job">  <option value="">-- Select job category --</option>  <option value="88742272048107">Accounting and auditing</option><option value="88742272029719">&nbsp;&nbsp;&nbsp;&nbsp;Accounting / Treasury</option><option value="88742272104813">&nbsp;&nbsp;&nbsp;&nbsp;Audit / Tax</option><option value="88742272446849">&nbsp;&nbsp;&nbsp;&nbsp;Enterprise</option><option value="88742272066741">Administration and Human Resources</option><option value="88742272085894">&nbsp;&nbsp;&nbsp;&nbsp;Administrative / Operation</option><option value="88742272275375">&nbsp;&nbsp;&nbsp;&nbsp;Clerical / Reception</option><option value="88742272542939">&nbsp;&nbsp;&nbsp;&nbsp;Human Resources</option><option value="88742273101096">&nbsp;&nbsp;&nbsp;&nbsp;Secretary / Personal Assistant</option><option value="88742273177852">&nbsp;&nbsp;&nbsp;&nbsp;Training and Development</option><option value="88742272123644">Banking / Finance</option><option value="88742272178882">&nbsp;&nbsp;&nbsp;&nbsp;Business / Retail / Private / Investment</option><option value="88742272613042">&nbsp;&nbsp;&nbsp;&nbsp;Internal control</option><option value="88742272666505">&nbsp;&nbsp;&nbsp;&nbsp;Loan / Credit analysis and approval / Mortgage</option><option value="88742273198718">&nbsp;&nbsp;&nbsp;&nbsp;Transactions / Securities</option><option value="90750309385881">Beauty / Health</option><option value="90750685739618">&nbsp;&nbsp;&nbsp;&nbsp;Sports / Leisure</option><option value="90750704454284">&nbsp;&nbsp;&nbsp;&nbsp;Beautician</option><option value="90750720261881">&nbsp;&nbsp;&nbsp;&nbsp;Nutritionist</option><option value="88742272160553">Building / Construction</option><option value="88742272142559">&nbsp;&nbsp;&nbsp;&nbsp;Building</option><option value="90750800831927">&nbsp;&nbsp;&nbsp;&nbsp;Architecture</option><option value="88742272761749">&nbsp;&nbsp;&nbsp;&nbsp;Measurement / Civil / Structural</option><option value="88742272352523">Design</option><option value="88742272464769">&nbsp;&nbsp;&nbsp;&nbsp;Fashion</option><option value="88742272505994">&nbsp;&nbsp;&nbsp;&nbsp;Graphic Design</option><option value="88742272593378">&nbsp;&nbsp;&nbsp;&nbsp;Interior Design</option><option value="88745262127608">&nbsp;&nbsp;&nbsp;&nbsp;Watches / Jewelry</option><option value="88742273239003">&nbsp;&nbsp;&nbsp;&nbsp;Web Design</option><option value="88742272371046">Education</option><option value="88742272819829">&nbsp;&nbsp;&nbsp;&nbsp;Mentor / Teacher / Professor</option><option value="88742272428035">Engineering</option><option value="88742272256791">&nbsp;&nbsp;&nbsp;&nbsp;Chemical industry</option><option value="88742272390382">&nbsp;&nbsp;&nbsp;&nbsp;Electricity / Electronics</option><option value="88742272703893">&nbsp;&nbsp;&nbsp;&nbsp;Manufacturing / Production</option><option value="88742272781707">&nbsp;&nbsp;&nbsp;&nbsp;Mechanical</option><option value="90750367478040">Hotel / Catering</option><option value="90750895055263">&nbsp;&nbsp;&nbsp;&nbsp;Food and Beverage</option><option value="90750916284914">&nbsp;&nbsp;&nbsp;&nbsp;Hotel Service</option><option value="90750951236877">&nbsp;&nbsp;&nbsp;&nbsp;Tourism / Travel Agency</option><option value="11">Information Technology</option><option value="88742272524318">&nbsp;&nbsp;&nbsp;&nbsp;Hardware</option><option value="88742272838252">&nbsp;&nbsp;&nbsp;&nbsp;Mobile / Wireless communications</option><option value="88742272856504">&nbsp;&nbsp;&nbsp;&nbsp;Network / Support</option><option value="88742272927564">&nbsp;&nbsp;&nbsp;&nbsp;Project Management</option><option value="88742273138403">&nbsp;&nbsp;&nbsp;&nbsp;Software Development</option><option value="88742273259016">&nbsp;&nbsp;&nbsp;&nbsp;Webmaster / SEO</option><option value="88744230610458">Insurance</option><option value="88742272574568">&nbsp;&nbsp;&nbsp;&nbsp;Insurance agent / Broker</option><option value="88742272684937">Management</option><option value="88742272486086">&nbsp;&nbsp;&nbsp;&nbsp;General management</option><option value="88742273119960">&nbsp;&nbsp;&nbsp;&nbsp;Senior management</option><option value="89939774169064">Manufacture</option><option value="89939817337212">&nbsp;&nbsp;&nbsp;&nbsp;Apparel / Textile</option><option value="89939875365040">&nbsp;&nbsp;&nbsp;&nbsp;Product Development / Management</option><option value="88742272741775">Marketing / Public Relations</option><option value="88742272722708">&nbsp;&nbsp;&nbsp;&nbsp;Marketing</option><option value="88742273006712">&nbsp;&nbsp;&nbsp;&nbsp;Public Relations</option><option value="88742272800828">Media and advertising</option><option value="90751110237849">&nbsp;&nbsp;&nbsp;&nbsp;Broadcast - TV/Radio</option><option value="88742272315065">&nbsp;&nbsp;&nbsp;&nbsp;Creative / Design</option><option value="90751149351962">&nbsp;&nbsp;&nbsp;&nbsp;Editor / Journalism</option><option value="88742272888702">&nbsp;&nbsp;&nbsp;&nbsp;Photography / Video</option><option value="90751177038491">&nbsp;&nbsp;&nbsp;&nbsp;Print Media</option><option value="90750433780067">Medical</option><option value="90751237703986">&nbsp;&nbsp;&nbsp;&nbsp;Doctor</option><option value="90751254301929">&nbsp;&nbsp;&nbsp;&nbsp;Nursing / Care</option><option value="88742272909400">Professional services</option><option value="88742272198671">&nbsp;&nbsp;&nbsp;&nbsp;Business Consulting</option><option value="88742272295448">&nbsp;&nbsp;&nbsp;&nbsp;Company Secretary</option><option value="88742272648894">&nbsp;&nbsp;&nbsp;&nbsp;Legal</option><option value="88742273218982">&nbsp;&nbsp;&nbsp;&nbsp;Translation</option><option value="88742272947786">Property / Real estate</option><option value="88742272967780">&nbsp;&nbsp;&nbsp;&nbsp;Property Consultants</option><option value="88742272987661">&nbsp;&nbsp;&nbsp;&nbsp;Property Management</option><option value="90750511993217">Government / Social Services</option><option value="90751329150175">&nbsp;&nbsp;&nbsp;&nbsp;Civil servants</option><option value="90751347363890">&nbsp;&nbsp;&nbsp;&nbsp;Social Services / NGO</option><option value="89939281025964">Purchase</option><option value="89939324602123">&nbsp;&nbsp;&nbsp;&nbsp;Clothing</option><option value="89939439270007">&nbsp;&nbsp;&nbsp;&nbsp;Electronics</option><option value="89939505611489">&nbsp;&nbsp;&nbsp;&nbsp;Toys / Watches</option><option value="88742273025616">Research / Laboratory</option><option value="88742272409675">&nbsp;&nbsp;&nbsp;&nbsp;Energy</option><option value="88742272630490">&nbsp;&nbsp;&nbsp;&nbsp;Laboratory</option><option value="88742273044249">&nbsp;&nbsp;&nbsp;&nbsp;Research and Development</option><option value="88742273081620">Sales / Customer Service / Business Development</option><option value="88742272011081">&nbsp;&nbsp;&nbsp;&nbsp;Account Services</option><option value="88742272218687">&nbsp;&nbsp;&nbsp;&nbsp;Business Development</option><option value="88742272238322">&nbsp;&nbsp;&nbsp;&nbsp;Channel / Distribution</option><option value="88742272333635">&nbsp;&nbsp;&nbsp;&nbsp;Customer Service</option><option value="88742273062887">&nbsp;&nbsp;&nbsp;&nbsp;Retail</option><option value="88742273157666">&nbsp;&nbsp;&nbsp;&nbsp;Telemarketing</option><option value="88742273280052">&nbsp;&nbsp;&nbsp;&nbsp;Wholesale</option><option value="90750555640833">Transportation / Logistic</option><option value="90751419200857">&nbsp;&nbsp;&nbsp;&nbsp;Aviation</option><option value="90751439243217">&nbsp;&nbsp;&nbsp;&nbsp;Freight</option><option value="90751461241786">&nbsp;&nbsp;&nbsp;&nbsp;Inventory / Warehouse</option><option value="90751479281023">&nbsp;&nbsp;&nbsp;&nbsp;Shipping</option><option value="90751507050257">&nbsp;&nbsp;&nbsp;&nbsp;Transportation</option><option value="88020923215666">Other</option><option value="90751594518160">&nbsp;&nbsp;&nbsp;&nbsp;Agriculture / Forestry / Fisheries</option><option value="90751627158195">&nbsp;&nbsp;&nbsp;&nbsp;Entertainment - Artist / Singer / Musician</option><option value="90751646370720">&nbsp;&nbsp;&nbsp;&nbsp;Security</option><option value="90751675496963">&nbsp;&nbsp;&nbsp;&nbsp;Student / Graduate / No experience</option><option value="90751707884094">&nbsp;&nbsp;&nbsp;&nbsp;Technician</option><option value="90751765078264">&nbsp;&nbsp;&nbsp;&nbsp;Trading</option></select>   </div><a id="site-menu-TOP-18" href="javascript: toggle_menu('TOP', '18'); void(0);" class="w3-menu  ">Employers</a><div name="site-submenu-TOP" id="site-submenu-TOP-18" class="w3-small w3-hide site-submenu-top">   <a id="site-menu-TOP-All-18" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;template=801543530031&amp;params=AllEmpl" class="w3-menu ">List All</a><a id="site-menu-TOP-86555632061031" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=86555632061031&amp;params=Employer" class="w3-menu  ">Premium Employer</a>                        <select class="site-select" onchange="switch_category_option(this.value,'Employer');" id="select-TOP-employer">  <option value="">-- Select industry --</option>  <option value="88764836752249">Banking / Finance</option><option value="88764491317706">Education and Training</option><option value="88764491337888">Human Resource Management / Consultants</option><option value="88764734221015">Information Technology</option><option value="88764889747013">Insurance </option><option value="88764491382671">Manufacturing - Electronics / Toys / Clothing / Other</option><option value="89941006587999">Marketing / Advertising / Public Relations</option><option value="88764491401731">Property / Security</option><option value="88764491420196">Retail / Wholesale</option><option value="88764491438708">Telecommunications</option><option value="88764491456778">Transport</option><option value="88765207819443">Other </option></select></div><a id="site-menu-TOP-4" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=4&amp;params=News" class="w3-menu  ">Updated News</a>                     <a id="site-menu-TOP-17" href="javascript: toggle_menu('TOP', '17'); void(0);" class="w3-menu  ">Locations</a><div name="site-submenu-TOP" id="site-submenu-TOP-17" class="w3-small w3-hide site-submenu-top">      <a id="site-menu-TOP-6" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=6&amp;params=NIL" class="w3-menu  ">Hong Kong</a>                     <a id="site-menu-TOP-84589660097957" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=84589660097957&amp;params=NIL" class="w3-menu  ">Japan</a>                     <a id="site-menu-TOP-7" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=7&amp;params=NIL" class="w3-menu  ">Taiwan</a>                     <a id="site-menu-TOP-8" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=8&amp;params=NIL" class="w3-menu  w3-hide">Cambodia</a>                     <a id="site-menu-TOP-9" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=9&amp;params=NIL" class="w3-menu  ">Singapore</a>                     <a id="site-menu-TOP-88020869413409" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=88020869413409&amp;params=NIL" class="w3-menu  ">UK</a>                     <a id="site-menu-TOP-88020883048761" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=88020883048761&amp;params=NIL" class="w3-menu  ">China</a>                     <a id="site-menu-TOP-91780884393455" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=91780884393455&amp;params=NIL" class="w3-menu  w3-hide">Bangladesh</a>                     <a id="site-menu-TOP-93683909360354" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=93683909360354&amp;params=NIL" class="w3-menu  w3-hide">India</a>                     <a id="site-menu-TOP-88020836996040" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=88020836996040&amp;params=NIL" class="w3-menu  ">USA</a>                     <a id="site-menu-TOP-93724740092753" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=93724740092753&amp;params=NIL" class="w3-menu  w3-hide">Netherlands</a>                     <a id="site-menu-TOP-93723321836316" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=93723321836316&amp;params=NIL" class="w3-menu  w3-hide">Poland</a>                     <a id="site-menu-TOP-90096758751010" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=90096758751010&amp;params=NIL" class="w3-menu  w3-hide">Vietnam</a>                     <a id="site-menu-TOP-94156018167009" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=94156018167009&amp;params=NIL" class="w3-menu  w3-hide">Philippines</a>                     <a id="site-menu-TOP-94506105698149" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=94506105698149&amp;params=NIL" class="w3-menu  w3-hide">Belgium</a>                     <a id="site-menu-TOP-94764553150924" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=94764553150924&amp;params=NIL" class="w3-menu  w3-hide">Australia</a>                     <a id="site-menu-TOP-95473571064737" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=95473571064737&amp;params=NIL" class="w3-menu  ">South Africa</a>                     <a id="site-menu-TOP-95974680385655" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=95974680385655&amp;params=NIL" class="w3-menu  ">Korea</a>                           </div><a id="site-menu-TOP-1" href="javascript: toggle_menu('TOP', '1'); void(0);" class="w3-menu  ">About Us</a><div name="site-submenu-TOP" id="site-submenu-TOP-1" class="w3-small w3-hide site-submenu-top">      <a id="site-menu-TOP-109034293507595" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Post&amp;template=801543530003&amp;key=1&amp;params=109034293507595" class="w3-menu  ">About CoolJobz.com</a>                     <a id="site-menu-TOP-98491680147395" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Post&amp;template=801543530003&amp;key=98491295477220&amp;params=98491680147395" class="w3-menu  ">For Company</a>                     <a id="site-menu-TOP-98495922448088" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Post&amp;template=801543530003&amp;key=98495858708743&amp;params=98495922448088" class="w3-menu  ">For Individual</a>                     <a id="site-menu-TOP-98591095668073" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=98591095668073&amp;params=Job" class="w3-menu  ">Join Us</a>                           </div><a id="site-menu-TOP-109035225404681" href="javascript: toggle_menu('TOP', '109035225404681'); void(0);" class="w3-menu  ">Our Products</a><div name="site-submenu-TOP" id="site-submenu-TOP-109035225404681" class="w3-small w3-hide site-submenu-top">      <a id="site-menu-TOP-109036424547333" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Post&amp;template=801543530003&amp;key=109036291980916&amp;params=109036424547333" class="w3-menu  ">Job Ad</a>                     <a id="site-menu-TOP-90017781708281" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Post&amp;template=801543530003&amp;key=90007567793998&amp;params=90017781708281" class="w3-menu  ">CoolJobzHRM</a>                           </div>
+
+         
+      
+      <a href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;template=801543530015" class="w3-menu"><i class="fa fa-sign-in"></i> Sign In</a>
+      <a href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_User&amp;template=801543530016" class="w3-menu"><i class="fa fa-user-plus"></i> Sign Up</a>
+      
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-hover-black w3-right w3-hide-large site-menu" onclick="site_sidebar_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <div class="w3-bar w3-white site-search">
+    <input class="site-search-input-lg" value="Search..." id="search-text-l" onfocus="if (this.value == 'Search...') { this.value = ''; }" onblur="if (this.value.trim() == '') { this.value = 'Search...'; }" onkeypress="if (event.keyCode == 13) { submit_search(1); return false; }">
+    <a href="javascript: submit_search(1); void(0);"><i class="fa fa-search"></i></a>
+    <a href="javascript: search_open(); void(0);" class="w3-margin-right"><i class="fa fa-sliders"></i></a>
+  </div>
+</div>
+
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide w3-hide-large site-sidebar" id="site-sidebar">
+  <a href="javascript:void(0)" onclick="site_sidebar_close()" class="w3-bar-item w3-menu w3-large w3-padding-16">×</a>
+  <a id="site-menu-SIDE-10" href="javascript: toggle_menu('SIDE', '10'); void(0);" class="w3-menu site-menu-item ">Jobs</a><div name="site-submenu-SIDE" id="site-submenu-SIDE-10" class="w3-small w3-hide "><a id="site-menu-SIDE-All-10" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;template=801543530031&amp;params=AllJb" class="w3-menu site-menu-item">List All</a>   <a id="site-menu-SIDE-3" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=3&amp;params=Job" class="w3-menu site-menu-item ">Recommended Job</a>                     <a id="site-menu-SIDE-88742272048107" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=88742272048107&amp;params=Job" class="w3-menu site-menu-item ">Accounting and auditing</a>                     <a id="site-menu-SIDE-88742272066741" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=88742272066741&amp;params=Job" class="w3-menu site-menu-item ">Administration and Human Resources</a>                     <a id="site-menu-SIDE-88742272123644" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=88742272123644&amp;params=Job" class="w3-menu site-menu-item ">Banking / Finance</a>                     <a id="site-menu-SIDE-11" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=11&amp;params=Job" class="w3-menu site-menu-item ">Information Technology</a>                     <a id="site-menu-SIDE-88742273081620" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=88742273081620&amp;params=Job" class="w3-menu site-menu-item ">Sales / Customer Service / Business Development</a>                     <select class="site-select" onchange="switch_category_option(this.value,'Job');" id="select-SIDE-job">  <option value="">-- Select job category --</option>  <option value="88742272048107">Accounting and auditing</option><option value="88742272029719">&nbsp;&nbsp;&nbsp;&nbsp;Accounting / Treasury</option><option value="88742272104813">&nbsp;&nbsp;&nbsp;&nbsp;Audit / Tax</option><option value="88742272446849">&nbsp;&nbsp;&nbsp;&nbsp;Enterprise</option><option value="88742272066741">Administration and Human Resources</option><option value="88742272085894">&nbsp;&nbsp;&nbsp;&nbsp;Administrative / Operation</option><option value="88742272275375">&nbsp;&nbsp;&nbsp;&nbsp;Clerical / Reception</option><option value="88742272542939">&nbsp;&nbsp;&nbsp;&nbsp;Human Resources</option><option value="88742273101096">&nbsp;&nbsp;&nbsp;&nbsp;Secretary / Personal Assistant</option><option value="88742273177852">&nbsp;&nbsp;&nbsp;&nbsp;Training and Development</option><option value="88742272123644">Banking / Finance</option><option value="88742272178882">&nbsp;&nbsp;&nbsp;&nbsp;Business / Retail / Private / Investment</option><option value="88742272613042">&nbsp;&nbsp;&nbsp;&nbsp;Internal control</option><option value="88742272666505">&nbsp;&nbsp;&nbsp;&nbsp;Loan / Credit analysis and approval / Mortgage</option><option value="88742273198718">&nbsp;&nbsp;&nbsp;&nbsp;Transactions / Securities</option><option value="90750309385881">Beauty / Health</option><option value="90750685739618">&nbsp;&nbsp;&nbsp;&nbsp;Sports / Leisure</option><option value="90750704454284">&nbsp;&nbsp;&nbsp;&nbsp;Beautician</option><option value="90750720261881">&nbsp;&nbsp;&nbsp;&nbsp;Nutritionist</option><option value="88742272160553">Building / Construction</option><option value="88742272142559">&nbsp;&nbsp;&nbsp;&nbsp;Building</option><option value="90750800831927">&nbsp;&nbsp;&nbsp;&nbsp;Architecture</option><option value="88742272761749">&nbsp;&nbsp;&nbsp;&nbsp;Measurement / Civil / Structural</option><option value="88742272352523">Design</option><option value="88742272464769">&nbsp;&nbsp;&nbsp;&nbsp;Fashion</option><option value="88742272505994">&nbsp;&nbsp;&nbsp;&nbsp;Graphic Design</option><option value="88742272593378">&nbsp;&nbsp;&nbsp;&nbsp;Interior Design</option><option value="88745262127608">&nbsp;&nbsp;&nbsp;&nbsp;Watches / Jewelry</option><option value="88742273239003">&nbsp;&nbsp;&nbsp;&nbsp;Web Design</option><option value="88742272371046">Education</option><option value="88742272819829">&nbsp;&nbsp;&nbsp;&nbsp;Mentor / Teacher / Professor</option><option value="88742272428035">Engineering</option><option value="88742272256791">&nbsp;&nbsp;&nbsp;&nbsp;Chemical industry</option><option value="88742272390382">&nbsp;&nbsp;&nbsp;&nbsp;Electricity / Electronics</option><option value="88742272703893">&nbsp;&nbsp;&nbsp;&nbsp;Manufacturing / Production</option><option value="88742272781707">&nbsp;&nbsp;&nbsp;&nbsp;Mechanical</option><option value="90750367478040">Hotel / Catering</option><option value="90750895055263">&nbsp;&nbsp;&nbsp;&nbsp;Food and Beverage</option><option value="90750916284914">&nbsp;&nbsp;&nbsp;&nbsp;Hotel Service</option><option value="90750951236877">&nbsp;&nbsp;&nbsp;&nbsp;Tourism / Travel Agency</option><option value="11">Information Technology</option><option value="88742272524318">&nbsp;&nbsp;&nbsp;&nbsp;Hardware</option><option value="88742272838252">&nbsp;&nbsp;&nbsp;&nbsp;Mobile / Wireless communications</option><option value="88742272856504">&nbsp;&nbsp;&nbsp;&nbsp;Network / Support</option><option value="88742272927564">&nbsp;&nbsp;&nbsp;&nbsp;Project Management</option><option value="88742273138403">&nbsp;&nbsp;&nbsp;&nbsp;Software Development</option><option value="88742273259016">&nbsp;&nbsp;&nbsp;&nbsp;Webmaster / SEO</option><option value="88744230610458">Insurance</option><option value="88742272574568">&nbsp;&nbsp;&nbsp;&nbsp;Insurance agent / Broker</option><option value="88742272684937">Management</option><option value="88742272486086">&nbsp;&nbsp;&nbsp;&nbsp;General management</option><option value="88742273119960">&nbsp;&nbsp;&nbsp;&nbsp;Senior management</option><option value="89939774169064">Manufacture</option><option value="89939817337212">&nbsp;&nbsp;&nbsp;&nbsp;Apparel / Textile</option><option value="89939875365040">&nbsp;&nbsp;&nbsp;&nbsp;Product Development / Management</option><option value="88742272741775">Marketing / Public Relations</option><option value="88742272722708">&nbsp;&nbsp;&nbsp;&nbsp;Marketing</option><option value="88742273006712">&nbsp;&nbsp;&nbsp;&nbsp;Public Relations</option><option value="88742272800828">Media and advertising</option><option value="90751110237849">&nbsp;&nbsp;&nbsp;&nbsp;Broadcast - TV/Radio</option><option value="88742272315065">&nbsp;&nbsp;&nbsp;&nbsp;Creative / Design</option><option value="90751149351962">&nbsp;&nbsp;&nbsp;&nbsp;Editor / Journalism</option><option value="88742272888702">&nbsp;&nbsp;&nbsp;&nbsp;Photography / Video</option><option value="90751177038491">&nbsp;&nbsp;&nbsp;&nbsp;Print Media</option><option value="90750433780067">Medical</option><option value="90751237703986">&nbsp;&nbsp;&nbsp;&nbsp;Doctor</option><option value="90751254301929">&nbsp;&nbsp;&nbsp;&nbsp;Nursing / Care</option><option value="88742272909400">Professional services</option><option value="88742272198671">&nbsp;&nbsp;&nbsp;&nbsp;Business Consulting</option><option value="88742272295448">&nbsp;&nbsp;&nbsp;&nbsp;Company Secretary</option><option value="88742272648894">&nbsp;&nbsp;&nbsp;&nbsp;Legal</option><option value="88742273218982">&nbsp;&nbsp;&nbsp;&nbsp;Translation</option><option value="88742272947786">Property / Real estate</option><option value="88742272967780">&nbsp;&nbsp;&nbsp;&nbsp;Property Consultants</option><option value="88742272987661">&nbsp;&nbsp;&nbsp;&nbsp;Property Management</option><option value="90750511993217">Government / Social Services</option><option value="90751329150175">&nbsp;&nbsp;&nbsp;&nbsp;Civil servants</option><option value="90751347363890">&nbsp;&nbsp;&nbsp;&nbsp;Social Services / NGO</option><option value="89939281025964">Purchase</option><option value="89939324602123">&nbsp;&nbsp;&nbsp;&nbsp;Clothing</option><option value="89939439270007">&nbsp;&nbsp;&nbsp;&nbsp;Electronics</option><option value="89939505611489">&nbsp;&nbsp;&nbsp;&nbsp;Toys / Watches</option><option value="88742273025616">Research / Laboratory</option><option value="88742272409675">&nbsp;&nbsp;&nbsp;&nbsp;Energy</option><option value="88742272630490">&nbsp;&nbsp;&nbsp;&nbsp;Laboratory</option><option value="88742273044249">&nbsp;&nbsp;&nbsp;&nbsp;Research and Development</option><option value="88742273081620">Sales / Customer Service / Business Development</option><option value="88742272011081">&nbsp;&nbsp;&nbsp;&nbsp;Account Services</option><option value="88742272218687">&nbsp;&nbsp;&nbsp;&nbsp;Business Development</option><option value="88742272238322">&nbsp;&nbsp;&nbsp;&nbsp;Channel / Distribution</option><option value="88742272333635">&nbsp;&nbsp;&nbsp;&nbsp;Customer Service</option><option value="88742273062887">&nbsp;&nbsp;&nbsp;&nbsp;Retail</option><option value="88742273157666">&nbsp;&nbsp;&nbsp;&nbsp;Telemarketing</option><option value="88742273280052">&nbsp;&nbsp;&nbsp;&nbsp;Wholesale</option><option value="90750555640833">Transportation / Logistic</option><option value="90751419200857">&nbsp;&nbsp;&nbsp;&nbsp;Aviation</option><option value="90751439243217">&nbsp;&nbsp;&nbsp;&nbsp;Freight</option><option value="90751461241786">&nbsp;&nbsp;&nbsp;&nbsp;Inventory / Warehouse</option><option value="90751479281023">&nbsp;&nbsp;&nbsp;&nbsp;Shipping</option><option value="90751507050257">&nbsp;&nbsp;&nbsp;&nbsp;Transportation</option><option value="88020923215666">Other</option><option value="90751594518160">&nbsp;&nbsp;&nbsp;&nbsp;Agriculture / Forestry / Fisheries</option><option value="90751627158195">&nbsp;&nbsp;&nbsp;&nbsp;Entertainment - Artist / Singer / Musician</option><option value="90751646370720">&nbsp;&nbsp;&nbsp;&nbsp;Security</option><option value="90751675496963">&nbsp;&nbsp;&nbsp;&nbsp;Student / Graduate / No experience</option><option value="90751707884094">&nbsp;&nbsp;&nbsp;&nbsp;Technician</option><option value="90751765078264">&nbsp;&nbsp;&nbsp;&nbsp;Trading</option></select>   </div><a id="site-menu-SIDE-18" href="javascript: toggle_menu('SIDE', '18'); void(0);" class="w3-menu site-menu-item ">Employers</a><div name="site-submenu-SIDE" id="site-submenu-SIDE-18" class="w3-small w3-hide ">   <a id="site-menu-SIDE-All-18" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;template=801543530031&amp;params=AllEmpl" class="w3-menu site-menu-item">List All</a><a id="site-menu-SIDE-86555632061031" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=86555632061031&amp;params=Employer" class="w3-menu site-menu-item ">Premium Employer</a>                        <select class="site-select" onchange="switch_category_option(this.value,'Employer');" id="select-SIDE-employer">  <option value="">-- Select industry --</option>  <option value="88764836752249">Banking / Finance</option><option value="88764491317706">Education and Training</option><option value="88764491337888">Human Resource Management / Consultants</option><option value="88764734221015">Information Technology</option><option value="88764889747013">Insurance </option><option value="88764491382671">Manufacturing - Electronics / Toys / Clothing / Other</option><option value="89941006587999">Marketing / Advertising / Public Relations</option><option value="88764491401731">Property / Security</option><option value="88764491420196">Retail / Wholesale</option><option value="88764491438708">Telecommunications</option><option value="88764491456778">Transport</option><option value="88765207819443">Other </option></select></div><a id="site-menu-SIDE-4" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=4&amp;params=News" class="w3-menu site-menu-item ">Updated News</a>                     <a id="site-menu-SIDE-17" href="javascript: toggle_menu('SIDE', '17'); void(0);" class="w3-menu site-menu-item ">Locations</a><div name="site-submenu-SIDE" id="site-submenu-SIDE-17" class="w3-small w3-hide ">      <a id="site-menu-SIDE-6" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=6&amp;params=NIL" class="w3-menu site-menu-item ">Hong Kong</a>                     <a id="site-menu-SIDE-84589660097957" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=84589660097957&amp;params=NIL" class="w3-menu site-menu-item ">Japan</a>                     <a id="site-menu-SIDE-7" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=7&amp;params=NIL" class="w3-menu site-menu-item ">Taiwan</a>                     <a id="site-menu-SIDE-8" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=8&amp;params=NIL" class="w3-menu site-menu-item w3-hide">Cambodia</a>                     <a id="site-menu-SIDE-9" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=9&amp;params=NIL" class="w3-menu site-menu-item ">Singapore</a>                     <a id="site-menu-SIDE-88020869413409" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=88020869413409&amp;params=NIL" class="w3-menu site-menu-item ">UK</a>                     <a id="site-menu-SIDE-88020883048761" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=88020883048761&amp;params=NIL" class="w3-menu site-menu-item ">China</a>                     <a id="site-menu-SIDE-91780884393455" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=91780884393455&amp;params=NIL" class="w3-menu site-menu-item w3-hide">Bangladesh</a>                     <a id="site-menu-SIDE-93683909360354" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=93683909360354&amp;params=NIL" class="w3-menu site-menu-item w3-hide">India</a>                     <a id="site-menu-SIDE-88020836996040" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=88020836996040&amp;params=NIL" class="w3-menu site-menu-item ">USA</a>                     <a id="site-menu-SIDE-93724740092753" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=93724740092753&amp;params=NIL" class="w3-menu site-menu-item w3-hide">Netherlands</a>                     <a id="site-menu-SIDE-93723321836316" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=93723321836316&amp;params=NIL" class="w3-menu site-menu-item w3-hide">Poland</a>                     <a id="site-menu-SIDE-90096758751010" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=90096758751010&amp;params=NIL" class="w3-menu site-menu-item w3-hide">Vietnam</a>                     <a id="site-menu-SIDE-94156018167009" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=94156018167009&amp;params=NIL" class="w3-menu site-menu-item w3-hide">Philippines</a>                     <a id="site-menu-SIDE-94506105698149" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=94506105698149&amp;params=NIL" class="w3-menu site-menu-item w3-hide">Belgium</a>                     <a id="site-menu-SIDE-94764553150924" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=94764553150924&amp;params=NIL" class="w3-menu site-menu-item w3-hide">Australia</a>                     <a id="site-menu-SIDE-95473571064737" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=95473571064737&amp;params=NIL" class="w3-menu site-menu-item ">South Africa</a>                     <a id="site-menu-SIDE-95974680385655" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=95974680385655&amp;params=NIL" class="w3-menu site-menu-item ">Korea</a>                           </div><a id="site-menu-SIDE-1" href="javascript: toggle_menu('SIDE', '1'); void(0);" class="w3-menu site-menu-item ">About Us</a><div name="site-submenu-SIDE" id="site-submenu-SIDE-1" class="w3-small w3-hide ">      <a id="site-menu-SIDE-109034293507595" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Post&amp;template=801543530003&amp;key=1&amp;params=109034293507595" class="w3-menu site-menu-item ">About CoolJobz.com</a>                     <a id="site-menu-SIDE-98491680147395" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Post&amp;template=801543530003&amp;key=98491295477220&amp;params=98491680147395" class="w3-menu site-menu-item ">For Company</a>                     <a id="site-menu-SIDE-98495922448088" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Post&amp;template=801543530003&amp;key=98495858708743&amp;params=98495922448088" class="w3-menu site-menu-item ">For Individual</a>                     <a id="site-menu-SIDE-98591095668073" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=98591095668073&amp;params=Job" class="w3-menu site-menu-item ">Join Us</a>                           </div><a id="site-menu-SIDE-109035225404681" href="javascript: toggle_menu('SIDE', '109035225404681'); void(0);" class="w3-menu site-menu-item ">Our Products</a><div name="site-submenu-SIDE" id="site-submenu-SIDE-109035225404681" class="w3-small w3-hide ">      <a id="site-menu-SIDE-109036424547333" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Post&amp;template=801543530003&amp;key=109036291980916&amp;params=109036424547333" class="w3-menu site-menu-item ">Job Ad</a>                     <a id="site-menu-SIDE-90017781708281" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Post&amp;template=801543530003&amp;key=90007567793998&amp;params=90017781708281" class="w3-menu site-menu-item ">CoolJobzHRM</a>                           </div>
+
+     
+  
+  <a href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;template=801543530015" class="w3-menu site-menu-item"><i class="fa fa-sign-in"></i> Sign In</a>
+  <a href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_User&amp;template=801543530016" class="w3-menu site-menu-item"><i class="fa fa-user-plus"></i> Sign Up</a>
+  
+</nav>
+
+
+
+
+<!-- Page content -->
+<div class="w3-content w3-padding site-main">
+
+    <div class="w3-container">
+      <h2>Talents</h2>
+    </div>
+  
+    <div class="w3-row-padding" id="site-posts">
+      
+  <!-- INFP -->
+  <div class="w3-col l3 m6 w3-margin-bottom site-pointer">
+    <div class="w3-card w3-display-container w3-round-large">
+      <div class="site-img-thumb" title="Multimedia Designer / Manager">       
+          <a href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&amp;dbname=site_Post&amp;template=801543530003&amp;key=116287851228042&amp;params=11">
+              <img class="w3-image w3-animate-opacity" src="https://thumbs.dreamstime.com/b/young-male-telemarketing-helpdesk-customer-service-operator-man-headseet-isolated-30894299.jpg">
+          </a>      
+      </div>
+      <div class="w3-container site-content">
+        <h3><a class="site-href" href="">Chan Ka Man</a> </h3>
+        <p class="w3-small">
+          <i class="fa fa-id-badge site-icon-margin w3-text-lime w3-large"></i>
+  <a class="w3-hover-opacity site-link" href=" ">INFP</a> 
+        </p>
+          
+        <p class="w3-small">
+          <i class="fa fa-map-marker site-icon-margin w3-text-lime w3-large"></i>
+  <a class="w3-hover-opacity site-link" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Category&template=801543530002&key=6&params=NIL">Hong Kong</a> 
+        </p>
+        <p class="w3-small">
+          <i class="fa fa-briefcase site-icon-margin w3-text-lime w3-large"></i>
+  <a class="w3-hover-opacity site-link" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Category&template=801543530002&key=88742272352523&params=NIL">Design</a> 
+        </p>
+        <p><span class="w3-small fa-stack site-icon-margin w3-text-lime"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-dollar fa-stack-1x"></i></span><a class="site-href" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Post&template=801543530003&key=115410161092387&params=98591095668073">HKD <span class="w3-large">19,000.00</span> - <span class="w3-large">23,000.00</span> <span class="site-nospace">Per Month</span></a></p>
+        
+      </div>
+      <div class="w3-display-hover w3-display-bottomright w3-animate-zoom">
+        <a class="w3-button w3-amber w3-hover-amber w3-circle site-round w3-margin" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Post&template=801543530003&key=115410161092387&params=98591095668073"><i class="fa fa-arrow-right"></i></a>
+      </div>
+         
+    </div>
+  </div>
+  
+  <!-- ENTP -->
+  <div class="w3-col l3 m6 w3-margin-bottom site-pointer">
+      <div class="w3-card w3-display-container w3-round-large">
+        <div class="site-img-thumb" title="Multimedia Designer / Manager">       
+            <a href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&amp;dbname=site_Post&amp;template=801543530003&amp;key=116287851228042&amp;params=11">
+                <img class="w3-image w3-animate-opacity" src="https://as2.ftcdn.net/v2/jpg/03/50/16/03/1000_F_350160312_NHXP8mINsOo2F644K2ObEqI23MfgTKrg.jpg">
+            </a>      
+        </div>
+        <div class="w3-container site-content">
+          <h3><a class="site-href" href="">Tam Ching Lai</a> </h3>
+          <p class="w3-small">
+            <i class="fa fa-id-badge site-icon-margin w3-text-lime w3-large"></i>
+    <a class="w3-hover-opacity site-link" href=" ">ENFP</a> 
+          </p>
+            
+          <p class="w3-small">
+            <i class="fa fa-map-marker site-icon-margin w3-text-lime w3-large"></i>
+    <a class="w3-hover-opacity site-link" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Category&template=801543530002&key=6&params=NIL">Japan</a> 
+          </p>
+          <p class="w3-small">
+            <i class="fa fa-briefcase site-icon-margin w3-text-lime w3-large"></i>
+    <a class="w3-hover-opacity site-link" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Category&template=801543530002&key=88742272352523&params=NIL">Multimedia Designer</a> 
+          </p>
+          <p><span class="w3-small fa-stack site-icon-margin w3-text-lime"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-dollar fa-stack-1x"></i></span><a class="site-href" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Post&template=801543530003&key=115410161092387&params=98591095668073">HKD <span class="w3-large">20,000.00</span> - <span class="w3-large">25,000.00</span> <span class="site-nospace">Per Month</span></a></p>
+          
+        </div>
+        <div class="w3-display-hover w3-display-bottomright w3-animate-zoom">
+          <a class="w3-button w3-amber w3-hover-amber w3-circle site-round w3-margin" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Post&template=801543530003&key=115410161092387&params=98591095668073"><i class="fa fa-arrow-right"></i></a>
+        </div>
+           
+      </div>
+    </div>
+    
+  <!-- ISFJ -->
+  <div class="w3-col l3 m6 w3-margin-bottom site-pointer">
+      <div class="w3-card w3-display-container w3-round-large">
+        <div class="site-img-thumb" title="Multimedia Designer / Manager">       
+            <a href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&amp;dbname=site_Post&amp;template=801543530003&amp;key=116287851228042&amp;params=11">
+                <img class="w3-image w3-animate-opacity" src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+            </a>      
+        </div>
+        <div class="w3-container site-content">
+          <h3><a class="site-href" href="">Eason Chan</a> </h3>
+          <p class="w3-small">
+            <i class="fa fa-id-badge site-icon-margin w3-text-lime w3-large"></i>
+    <a class="w3-hover-opacity site-link" href=" ">ISFJ</a> 
+          </p>
+            
+          <p class="w3-small">
+            <i class="fa fa-map-marker site-icon-margin w3-text-lime w3-large"></i>
+    <a class="w3-hover-opacity site-link" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Category&template=801543530002&key=6&params=NIL">China</a> 
+          </p>
+          <p class="w3-small">
+            <i class="fa fa-briefcase site-icon-margin w3-text-lime w3-large"></i>
+    <a class="w3-hover-opacity site-link" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Category&template=801543530002&key=88742272352523&params=NIL">Singer</a> 
+          </p>
+          <p><span class="w3-small fa-stack site-icon-margin w3-text-lime"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-dollar fa-stack-1x"></i></span><a class="site-href" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Post&template=801543530003&key=115410161092387&params=98591095668073">HKD <span class="w3-large">1900.00</span> - <span class="w3-large">2300.00</span> <span class="site-nospace">Per Month</span></a></p>
+          
+        </div>
+        <div class="w3-display-hover w3-display-bottomright w3-animate-zoom">
+          <a class="w3-button w3-amber w3-hover-amber w3-circle site-round w3-margin" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Post&template=801543530003&key=115410161092387&params=98591095668073"><i class="fa fa-arrow-right"></i></a>
+        </div>
+           
+      </div>
+    </div>
+  
+  <!-- ISTP -->
+  <div class="w3-col l3 m6 w3-margin-bottom site-pointer">
+  <div class="w3-card w3-display-container w3-round-large">
+      <div class="site-img-thumb" title="Multimedia Designer / Manager">       
+          <a href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&amp;dbname=site_Post&amp;template=801543530003&amp;key=116287851228042&amp;params=11">
+              <img class="w3-image w3-animate-opacity" src="https://us.123rf.com/450wm/nightunter/nightunter1910/nightunter191004031/131984657-military-army-african-male-camouflage-suit-sorrow-white-background-studio.jpg?ver=6">
+          </a>      
+      </div>
+      <div class="w3-container site-content">
+      <h3><a class="site-href" href="">Smith Cheung</a> </h3>
+      <p class="w3-small">
+          <i class="fa fa-id-badge site-icon-margin w3-text-lime w3-large"></i>
+  <a class="w3-hover-opacity site-link" href=" ">ISTP</a> 
+      </p>
+          
+      <p class="w3-small">
+          <i class="fa fa-map-marker site-icon-margin w3-text-lime w3-large"></i>
+  <a class="w3-hover-opacity site-link" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Category&template=801543530002&key=6&params=NIL">USA</a> 
+      </p>
+      <p class="w3-small">
+          <i class="fa fa-briefcase site-icon-margin w3-text-lime w3-large"></i>
+  <a class="w3-hover-opacity site-link" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Category&template=801543530002&key=88742272352523&params=NIL">Marketing</a> 
+      </p>
+      <p><span class="w3-small fa-stack site-icon-margin w3-text-lime"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-dollar fa-stack-1x"></i></span><a class="site-href" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Post&template=801543530003&key=115410161092387&params=98591095668073">HKD <span class="w3-large">19,000.00</span> - <span class="w3-large">23,000.00</span> <span class="site-nospace">Per Month</span></a></p>
+      
+      </div>
+      <div class="w3-display-hover w3-display-bottomright w3-animate-zoom">
+      <a class="w3-button w3-amber w3-hover-amber w3-circle site-round w3-margin" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Post&template=801543530003&key=115410161092387&params=98591095668073"><i class="fa fa-arrow-right"></i></a>
+      </div>
+          
+  </div>
+  </div>
+  
+  <!-- INFJ -->
+  <div class="w3-col l3 m6 w3-margin-bottom site-pointer">
+      <div class="w3-card w3-display-container w3-round-large">
+        <div class="site-img-thumb" title="Multimedia Designer / Manager">       
+            <a href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&amp;dbname=site_Post&amp;template=801543530003&amp;key=116287851228042&amp;params=11">
+                <img class="w3-image w3-animate-opacity" src="https://thumbs.dreamstime.com/b/cyber-woman-fresh-lemon-11468422.jpg">
+            </a>      
+        </div>
+        <div class="w3-container site-content">
+          <h3><a class="site-href" href="">David el Chan</a> </h3>
+          <p class="w3-small">
+            <i class="fa fa-id-badge site-icon-margin w3-text-lime w3-large"></i>
+    <a class="w3-hover-opacity site-link" href=" ">INFJ</a> 
+          </p>
+            
+          <p class="w3-small">
+            <i class="fa fa-map-marker site-icon-margin w3-text-lime w3-large"></i>
+    <a class="w3-hover-opacity site-link" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Category&template=801543530002&key=6&params=NIL">USA</a> 
+          </p>
+          <p class="w3-small">
+            <i class="fa fa-briefcase site-icon-margin w3-text-lime w3-large"></i>
+    <a class="w3-hover-opacity site-link" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Category&template=801543530002&key=88742272352523&params=NIL">Design</a> 
+          </p>
+          <p><span class="w3-small fa-stack site-icon-margin w3-text-lime"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-dollar fa-stack-1x"></i></span><a class="site-href" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Post&template=801543530003&key=115410161092387&params=98591095668073">HKD <span class="w3-large">19,000.00</span> - <span class="w3-large">23,000.00</span> <span class="site-nospace">Per Month</span></a></p>
+          
+        </div>
+        <div class="w3-display-hover w3-display-bottomright w3-animate-zoom">
+          <a class="w3-button w3-amber w3-hover-amber w3-circle site-round w3-margin" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Post&template=801543530003&key=115410161092387&params=98591095668073"><i class="fa fa-arrow-right"></i></a>
+        </div>
+           
+      </div>
+    </div>
+    
+  <!-- ESFJ -->
+  <div class="w3-col l3 m6 w3-margin-bottom site-pointer">
+  <div class="w3-card w3-display-container w3-round-large">
+      <div class="site-img-thumb" title="Multimedia Designer / Manager">       
+          <a href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&amp;dbname=site_Post&amp;template=801543530003&amp;key=116287851228042&amp;params=11">
+              <img class="w3-image w3-animate-opacity" src="https://thumbs.dreamstime.com/b/great-male-customer-service-17132422.jpg">
+          </a>      
+      </div>
+      <div class="w3-container site-content">
+      <h3><a class="site-href" href="">Joe Yau</a> </h3>
+      <p class="w3-small">
+          <i class="fa fa-id-badge site-icon-margin w3-text-lime w3-large"></i>
+  <a class="w3-hover-opacity site-link" href=" ">ESFJ</a> 
+      </p>
+          
+      <p class="w3-small">
+          <i class="fa fa-map-marker site-icon-margin w3-text-lime w3-large"></i>
+  <a class="w3-hover-opacity site-link" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Category&template=801543530002&key=6&params=NIL">Hong Kong</a> 
+      </p>
+      <p class="w3-small">
+          <i class="fa fa-briefcase site-icon-margin w3-text-lime w3-large"></i>
+  <a class="w3-hover-opacity site-link" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Category&template=801543530002&key=88742272352523&params=NIL">Design</a> 
+      </p>
+      <p><span class="w3-small fa-stack site-icon-margin w3-text-lime"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-dollar fa-stack-1x"></i></span><a class="site-href" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Post&template=801543530003&key=115410161092387&params=98591095668073">HKD <span class="w3-large">19,000.00</span> - <span class="w3-large">23,000.00</span> <span class="site-nospace">Per Month</span></a></p>
+      
+      </div>
+      <div class="w3-display-hover w3-display-bottomright w3-animate-zoom">
+      <a class="w3-button w3-amber w3-hover-amber w3-circle site-round w3-margin" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Post&template=801543530003&key=115410161092387&params=98591095668073"><i class="fa fa-arrow-right"></i></a>
+      </div>
+          
+  </div>
+  </div>
+  
+  <div class="w3-col l3 m6 w3-margin-bottom site-pointer">
+      <div class="w3-card w3-display-container w3-round-large">
+        <div class="site-img-thumb" title="Multimedia Designer / Manager">       
+            <a href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&amp;dbname=site_Post&amp;template=801543530003&amp;key=116287851228042&amp;params=11">
+                <img class="w3-image w3-animate-opacity" src="https://media.istockphoto.com/photos/head-shot-portrait-attractive-young-indian-woman-looking-at-camera-picture-id1311858467?k=20&m=1311858467&s=612x612&w=0&h=7tKatsNShYgfy0x0Rc7NLzeaAI026EaZkjly9lflWmo=">
+            </a>      
+        </div>
+        <div class="w3-container site-content">
+          <h3><a class="site-href" href="">BJIKHJ DSN</a> </h3>
+          <p class="w3-small">
+            <i class="fa fa-id-badge site-icon-margin w3-text-lime w3-large"></i>
+    <a class="w3-hover-opacity site-link" href=" ">INFP</a> 
+          </p>
+            
+          <p class="w3-small">
+            <i class="fa fa-map-marker site-icon-margin w3-text-lime w3-large"></i>
+    <a class="w3-hover-opacity site-link" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Category&template=801543530002&key=6&params=NIL">India</a> 
+          </p>
+          <p class="w3-small">
+            <i class="fa fa-briefcase site-icon-margin w3-text-lime w3-large"></i>
+    <a class="w3-hover-opacity site-link" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Category&template=801543530002&key=88742272352523&params=NIL">Front-end developer</a> 
+          </p>
+          <p><span class="w3-small fa-stack site-icon-margin w3-text-lime"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-dollar fa-stack-1x"></i></span><a class="site-href" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Post&template=801543530003&key=115410161092387&params=98591095668073">HKD <span class="w3-large">29,000.00</span> - <span class="w3-large">33,000.00</span> <span class="site-nospace">Per Month</span></a></p>
+          
+        </div>
+        <div class="w3-display-hover w3-display-bottomright w3-animate-zoom">
+          <a class="w3-button w3-amber w3-hover-amber w3-circle site-round w3-margin" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Post&template=801543530003&key=115410161092387&params=98591095668073"><i class="fa fa-arrow-right"></i></a>
+        </div>
+           
+      </div>
+    </div>
+  
+  <div class="w3-col l3 m6 w3-margin-bottom site-pointer">
+  <div class="w3-card w3-display-container w3-round-large">
+      <div class="site-img-thumb" title="Multimedia Designer / Manager">       
+          <a href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&amp;dbname=site_Post&amp;template=801543530003&amp;key=116287851228042&amp;params=11">
+              <img class="w3-image w3-animate-opacity" src="https://media.istockphoto.com/photos/young-african-woman-smiling-at-sunset-picture-id969233490?k=20&m=969233490&s=612x612&w=0&h=jXLgjbu0CIWEohHgcx_ZHBhrcH3hNKcg7TVJgehndPg=">
+          </a>      
+      </div>
+      <div class="w3-container site-content">
+      <h3><a class="site-href" href="">Drake</a> </h3>
+      <p class="w3-small">
+          <i class="fa fa-id-badge site-icon-margin w3-text-lime w3-large"></i>
+  <a class="w3-hover-opacity site-link" href=" ">ESFJ</a> 
+      </p>
+          
+      <p class="w3-small">
+          <i class="fa fa-map-marker site-icon-margin w3-text-lime w3-large"></i>
+  <a class="w3-hover-opacity site-link" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Category&template=801543530002&key=6&params=NIL">Hong Kong</a> 
+      </p>
+      <p class="w3-small">
+          <i class="fa fa-briefcase site-icon-margin w3-text-lime w3-large"></i>
+  <a class="w3-hover-opacity site-link" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Category&template=801543530002&key=88742272352523&params=NIL">Teacher</a> 
+      </p>
+      <p><span class="w3-small fa-stack site-icon-margin w3-text-lime"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-dollar fa-stack-1x"></i></span><a class="site-href" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Post&template=801543530003&key=115410161092387&params=98591095668073">HKD <span class="w3-large">25,000.00</span> - <span class="w3-large">30,000.00</span> <span class="site-nospace">Per Month</span></a></p>
+      
+      </div>
+      <div class="w3-display-hover w3-display-bottomright w3-animate-zoom">
+      <a class="w3-button w3-amber w3-hover-amber w3-circle site-round w3-margin" href="https://www.cooljobz.com/dbs/bdetail?share=cooljobz&dbname=site_Post&template=801543530003&key=115410161092387&params=98591095668073"><i class="fa fa-arrow-right"></i></a>
+      </div>
+          
+  </div>
+  </div>
+  
+    </div>
+  
+    <div class="w3-row-padding" id="site-loadmore">
+      <div class="w3-padding-small w3-margin-bottom"><a href="javascript: loadMorePosts();" class="w3-amber w3-hover-amber w3-button w3-round-xxlarge">See more...</a></div>
+    </div>
+  
+  <!-- End page content -->
+  </div>
+
+
+
+
+<!-- Footer -->
+<div class="w3-display-container site-footer" style="background-image: url('https://www.mindvan.com/dbp/images/cooljobz.test@mindvan.com/contact_cooljobz.jpg');" id="contact">
+  <div class="w3-display-right w3-black w3-opacity-min w3-padding-large w3-margin-right w3-twothird">
+    <h3 class="w3-center">Contact Us</h3>
+    <div class="w3-section">
+      
+<p class="w3-hide-small w3-hide-medium" dir="ltr">We need your feedback to make Cooljobz.com continuous improvement. If you have any satisfaction or dissatisfaction, or encounter any problems in the use of the process, you are welcome to our attention that on Cooljobz.com.&nbsp;</p>
+<div>
+<table style="width: 100%;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td align="right">Tel:&nbsp;</td>
+<td><span>3188 4978</span></td>
+</tr>
+<tr>
+<td align="right">Email:&nbsp;</td>
+<td><a href="mailto:cs@cooljobz.com" target="_blank">cs@cooljobz.com</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p dir="ltr">Want to Post an Advertisement?</p>
+<p dir="ltr">Please call or email to understand advertising details:</p>
+<div class="content_grey_box content_grey_box_bottom">
+<table style="width: 100%;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td align="right">Tel:&nbsp;</td>
+<td>3188 4978</td>
+</tr>
+<tr>
+<td align="right">Email:&nbsp;</td>
+<td><a href="mailto:cs@cooljobz.com" target="_blank">cs@cooljobz.com</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+    </div>
+  </div>
+</div>
+
+<footer class="w3-center w3-black w3-padding-32">
+  <div class="w3-xlarge w3-section">
+    <a target="_blank" href="https://www.facebook.com/Cooljobz" class="w3-hover-opacity"><i class="fa fa-facebook-official"></i></a> &nbsp;
+       
+    ©2022 <a href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;template=801543530001" class="w3-hover-opacity site-link">CoolJobz.com</a>
+  </div>
+  <div><a id="site-menu-BTM-10" href="javascript: toggle_menu('BTM', '10'); void(0);" class="w3-menu  ">Jobs</a><div name="site-submenu-BTM" id="site-submenu-BTM-10" class="w3-small w3-hide site-submenu-btm"><a id="site-menu-BTM-All-10" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;template=801543530031&amp;params=AllJb" class="w3-menu ">List All</a>   <a id="site-menu-BTM-3" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=3&amp;params=Job" class="w3-menu  ">Recommended Job</a>                     <a id="site-menu-BTM-88742272048107" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=88742272048107&amp;params=Job" class="w3-menu  ">Accounting and auditing</a>                     <a id="site-menu-BTM-88742272066741" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=88742272066741&amp;params=Job" class="w3-menu  ">Administration and Human Resources</a>                     <a id="site-menu-BTM-88742272123644" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=88742272123644&amp;params=Job" class="w3-menu  ">Banking / Finance</a>                     <a id="site-menu-BTM-11" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=11&amp;params=Job" class="w3-menu  ">Information Technology</a>                     <a id="site-menu-BTM-88742273081620" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=88742273081620&amp;params=Job" class="w3-menu  ">Sales / Customer Service / Business Development</a>                     <select class="site-select" onchange="switch_category_option(this.value,'Job');" id="select-BTM-job">  <option value="">-- Select job category --</option>  <option value="88742272048107">Accounting and auditing</option><option value="88742272029719">&nbsp;&nbsp;&nbsp;&nbsp;Accounting / Treasury</option><option value="88742272104813">&nbsp;&nbsp;&nbsp;&nbsp;Audit / Tax</option><option value="88742272446849">&nbsp;&nbsp;&nbsp;&nbsp;Enterprise</option><option value="88742272066741">Administration and Human Resources</option><option value="88742272085894">&nbsp;&nbsp;&nbsp;&nbsp;Administrative / Operation</option><option value="88742272275375">&nbsp;&nbsp;&nbsp;&nbsp;Clerical / Reception</option><option value="88742272542939">&nbsp;&nbsp;&nbsp;&nbsp;Human Resources</option><option value="88742273101096">&nbsp;&nbsp;&nbsp;&nbsp;Secretary / Personal Assistant</option><option value="88742273177852">&nbsp;&nbsp;&nbsp;&nbsp;Training and Development</option><option value="88742272123644">Banking / Finance</option><option value="88742272178882">&nbsp;&nbsp;&nbsp;&nbsp;Business / Retail / Private / Investment</option><option value="88742272613042">&nbsp;&nbsp;&nbsp;&nbsp;Internal control</option><option value="88742272666505">&nbsp;&nbsp;&nbsp;&nbsp;Loan / Credit analysis and approval / Mortgage</option><option value="88742273198718">&nbsp;&nbsp;&nbsp;&nbsp;Transactions / Securities</option><option value="90750309385881">Beauty / Health</option><option value="90750685739618">&nbsp;&nbsp;&nbsp;&nbsp;Sports / Leisure</option><option value="90750704454284">&nbsp;&nbsp;&nbsp;&nbsp;Beautician</option><option value="90750720261881">&nbsp;&nbsp;&nbsp;&nbsp;Nutritionist</option><option value="88742272160553">Building / Construction</option><option value="88742272142559">&nbsp;&nbsp;&nbsp;&nbsp;Building</option><option value="90750800831927">&nbsp;&nbsp;&nbsp;&nbsp;Architecture</option><option value="88742272761749">&nbsp;&nbsp;&nbsp;&nbsp;Measurement / Civil / Structural</option><option value="88742272352523">Design</option><option value="88742272464769">&nbsp;&nbsp;&nbsp;&nbsp;Fashion</option><option value="88742272505994">&nbsp;&nbsp;&nbsp;&nbsp;Graphic Design</option><option value="88742272593378">&nbsp;&nbsp;&nbsp;&nbsp;Interior Design</option><option value="88745262127608">&nbsp;&nbsp;&nbsp;&nbsp;Watches / Jewelry</option><option value="88742273239003">&nbsp;&nbsp;&nbsp;&nbsp;Web Design</option><option value="88742272371046">Education</option><option value="88742272819829">&nbsp;&nbsp;&nbsp;&nbsp;Mentor / Teacher / Professor</option><option value="88742272428035">Engineering</option><option value="88742272256791">&nbsp;&nbsp;&nbsp;&nbsp;Chemical industry</option><option value="88742272390382">&nbsp;&nbsp;&nbsp;&nbsp;Electricity / Electronics</option><option value="88742272703893">&nbsp;&nbsp;&nbsp;&nbsp;Manufacturing / Production</option><option value="88742272781707">&nbsp;&nbsp;&nbsp;&nbsp;Mechanical</option><option value="90750367478040">Hotel / Catering</option><option value="90750895055263">&nbsp;&nbsp;&nbsp;&nbsp;Food and Beverage</option><option value="90750916284914">&nbsp;&nbsp;&nbsp;&nbsp;Hotel Service</option><option value="90750951236877">&nbsp;&nbsp;&nbsp;&nbsp;Tourism / Travel Agency</option><option value="11">Information Technology</option><option value="88742272524318">&nbsp;&nbsp;&nbsp;&nbsp;Hardware</option><option value="88742272838252">&nbsp;&nbsp;&nbsp;&nbsp;Mobile / Wireless communications</option><option value="88742272856504">&nbsp;&nbsp;&nbsp;&nbsp;Network / Support</option><option value="88742272927564">&nbsp;&nbsp;&nbsp;&nbsp;Project Management</option><option value="88742273138403">&nbsp;&nbsp;&nbsp;&nbsp;Software Development</option><option value="88742273259016">&nbsp;&nbsp;&nbsp;&nbsp;Webmaster / SEO</option><option value="88744230610458">Insurance</option><option value="88742272574568">&nbsp;&nbsp;&nbsp;&nbsp;Insurance agent / Broker</option><option value="88742272684937">Management</option><option value="88742272486086">&nbsp;&nbsp;&nbsp;&nbsp;General management</option><option value="88742273119960">&nbsp;&nbsp;&nbsp;&nbsp;Senior management</option><option value="89939774169064">Manufacture</option><option value="89939817337212">&nbsp;&nbsp;&nbsp;&nbsp;Apparel / Textile</option><option value="89939875365040">&nbsp;&nbsp;&nbsp;&nbsp;Product Development / Management</option><option value="88742272741775">Marketing / Public Relations</option><option value="88742272722708">&nbsp;&nbsp;&nbsp;&nbsp;Marketing</option><option value="88742273006712">&nbsp;&nbsp;&nbsp;&nbsp;Public Relations</option><option value="88742272800828">Media and advertising</option><option value="90751110237849">&nbsp;&nbsp;&nbsp;&nbsp;Broadcast - TV/Radio</option><option value="88742272315065">&nbsp;&nbsp;&nbsp;&nbsp;Creative / Design</option><option value="90751149351962">&nbsp;&nbsp;&nbsp;&nbsp;Editor / Journalism</option><option value="88742272888702">&nbsp;&nbsp;&nbsp;&nbsp;Photography / Video</option><option value="90751177038491">&nbsp;&nbsp;&nbsp;&nbsp;Print Media</option><option value="90750433780067">Medical</option><option value="90751237703986">&nbsp;&nbsp;&nbsp;&nbsp;Doctor</option><option value="90751254301929">&nbsp;&nbsp;&nbsp;&nbsp;Nursing / Care</option><option value="88742272909400">Professional services</option><option value="88742272198671">&nbsp;&nbsp;&nbsp;&nbsp;Business Consulting</option><option value="88742272295448">&nbsp;&nbsp;&nbsp;&nbsp;Company Secretary</option><option value="88742272648894">&nbsp;&nbsp;&nbsp;&nbsp;Legal</option><option value="88742273218982">&nbsp;&nbsp;&nbsp;&nbsp;Translation</option><option value="88742272947786">Property / Real estate</option><option value="88742272967780">&nbsp;&nbsp;&nbsp;&nbsp;Property Consultants</option><option value="88742272987661">&nbsp;&nbsp;&nbsp;&nbsp;Property Management</option><option value="90750511993217">Government / Social Services</option><option value="90751329150175">&nbsp;&nbsp;&nbsp;&nbsp;Civil servants</option><option value="90751347363890">&nbsp;&nbsp;&nbsp;&nbsp;Social Services / NGO</option><option value="89939281025964">Purchase</option><option value="89939324602123">&nbsp;&nbsp;&nbsp;&nbsp;Clothing</option><option value="89939439270007">&nbsp;&nbsp;&nbsp;&nbsp;Electronics</option><option value="89939505611489">&nbsp;&nbsp;&nbsp;&nbsp;Toys / Watches</option><option value="88742273025616">Research / Laboratory</option><option value="88742272409675">&nbsp;&nbsp;&nbsp;&nbsp;Energy</option><option value="88742272630490">&nbsp;&nbsp;&nbsp;&nbsp;Laboratory</option><option value="88742273044249">&nbsp;&nbsp;&nbsp;&nbsp;Research and Development</option><option value="88742273081620">Sales / Customer Service / Business Development</option><option value="88742272011081">&nbsp;&nbsp;&nbsp;&nbsp;Account Services</option><option value="88742272218687">&nbsp;&nbsp;&nbsp;&nbsp;Business Development</option><option value="88742272238322">&nbsp;&nbsp;&nbsp;&nbsp;Channel / Distribution</option><option value="88742272333635">&nbsp;&nbsp;&nbsp;&nbsp;Customer Service</option><option value="88742273062887">&nbsp;&nbsp;&nbsp;&nbsp;Retail</option><option value="88742273157666">&nbsp;&nbsp;&nbsp;&nbsp;Telemarketing</option><option value="88742273280052">&nbsp;&nbsp;&nbsp;&nbsp;Wholesale</option><option value="90750555640833">Transportation / Logistic</option><option value="90751419200857">&nbsp;&nbsp;&nbsp;&nbsp;Aviation</option><option value="90751439243217">&nbsp;&nbsp;&nbsp;&nbsp;Freight</option><option value="90751461241786">&nbsp;&nbsp;&nbsp;&nbsp;Inventory / Warehouse</option><option value="90751479281023">&nbsp;&nbsp;&nbsp;&nbsp;Shipping</option><option value="90751507050257">&nbsp;&nbsp;&nbsp;&nbsp;Transportation</option><option value="88020923215666">Other</option><option value="90751594518160">&nbsp;&nbsp;&nbsp;&nbsp;Agriculture / Forestry / Fisheries</option><option value="90751627158195">&nbsp;&nbsp;&nbsp;&nbsp;Entertainment - Artist / Singer / Musician</option><option value="90751646370720">&nbsp;&nbsp;&nbsp;&nbsp;Security</option><option value="90751675496963">&nbsp;&nbsp;&nbsp;&nbsp;Student / Graduate / No experience</option><option value="90751707884094">&nbsp;&nbsp;&nbsp;&nbsp;Technician</option><option value="90751765078264">&nbsp;&nbsp;&nbsp;&nbsp;Trading</option></select>   </div><a id="site-menu-BTM-18" href="javascript: toggle_menu('BTM', '18'); void(0);" class="w3-menu  ">Employers</a><div name="site-submenu-BTM" id="site-submenu-BTM-18" class="w3-small w3-hide site-submenu-btm">   <a id="site-menu-BTM-All-18" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;template=801543530031&amp;params=AllEmpl" class="w3-menu ">List All</a><a id="site-menu-BTM-86555632061031" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=86555632061031&amp;params=Employer" class="w3-menu  ">Premium Employer</a>                        <select class="site-select" onchange="switch_category_option(this.value,'Employer');" id="select-BTM-employer">  <option value="">-- Select industry --</option>  <option value="88764836752249">Banking / Finance</option><option value="88764491317706">Education and Training</option><option value="88764491337888">Human Resource Management / Consultants</option><option value="88764734221015">Information Technology</option><option value="88764889747013">Insurance </option><option value="88764491382671">Manufacturing - Electronics / Toys / Clothing / Other</option><option value="89941006587999">Marketing / Advertising / Public Relations</option><option value="88764491401731">Property / Security</option><option value="88764491420196">Retail / Wholesale</option><option value="88764491438708">Telecommunications</option><option value="88764491456778">Transport</option><option value="88765207819443">Other </option></select></div><a id="site-menu-BTM-4" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=4&amp;params=News" class="w3-menu  ">Updated News</a>                     <a id="site-menu-BTM-17" href="javascript: toggle_menu('BTM', '17'); void(0);" class="w3-menu  ">Locations</a><div name="site-submenu-BTM" id="site-submenu-BTM-17" class="w3-small w3-hide site-submenu-btm">      <a id="site-menu-BTM-6" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=6&amp;params=NIL" class="w3-menu  ">Hong Kong</a>                     <a id="site-menu-BTM-84589660097957" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=84589660097957&amp;params=NIL" class="w3-menu  ">Japan</a>                     <a id="site-menu-BTM-7" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=7&amp;params=NIL" class="w3-menu  ">Taiwan</a>                     <a id="site-menu-BTM-8" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=8&amp;params=NIL" class="w3-menu  w3-hide">Cambodia</a>                     <a id="site-menu-BTM-9" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=9&amp;params=NIL" class="w3-menu  ">Singapore</a>                     <a id="site-menu-BTM-88020869413409" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=88020869413409&amp;params=NIL" class="w3-menu  ">UK</a>                     <a id="site-menu-BTM-88020883048761" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=88020883048761&amp;params=NIL" class="w3-menu  ">China</a>                     <a id="site-menu-BTM-91780884393455" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=91780884393455&amp;params=NIL" class="w3-menu  w3-hide">Bangladesh</a>                     <a id="site-menu-BTM-93683909360354" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=93683909360354&amp;params=NIL" class="w3-menu  w3-hide">India</a>                     <a id="site-menu-BTM-88020836996040" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=88020836996040&amp;params=NIL" class="w3-menu  ">USA</a>                     <a id="site-menu-BTM-93724740092753" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=93724740092753&amp;params=NIL" class="w3-menu  w3-hide">Netherlands</a>                     <a id="site-menu-BTM-93723321836316" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=93723321836316&amp;params=NIL" class="w3-menu  w3-hide">Poland</a>                     <a id="site-menu-BTM-90096758751010" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=90096758751010&amp;params=NIL" class="w3-menu  w3-hide">Vietnam</a>                     <a id="site-menu-BTM-94156018167009" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=94156018167009&amp;params=NIL" class="w3-menu  w3-hide">Philippines</a>                     <a id="site-menu-BTM-94506105698149" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=94506105698149&amp;params=NIL" class="w3-menu  w3-hide">Belgium</a>                     <a id="site-menu-BTM-94764553150924" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=94764553150924&amp;params=NIL" class="w3-menu  w3-hide">Australia</a>                     <a id="site-menu-BTM-95473571064737" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=95473571064737&amp;params=NIL" class="w3-menu  ">South Africa</a>                     <a id="site-menu-BTM-95974680385655" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=95974680385655&amp;params=NIL" class="w3-menu  ">Korea</a>                           </div><a id="site-menu-BTM-1" href="javascript: toggle_menu('BTM', '1'); void(0);" class="w3-menu  ">About Us</a><div name="site-submenu-BTM" id="site-submenu-BTM-1" class="w3-small w3-hide site-submenu-btm">      <a id="site-menu-BTM-109034293507595" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Post&amp;template=801543530003&amp;key=1&amp;params=109034293507595" class="w3-menu  ">About CoolJobz.com</a>                     <a id="site-menu-BTM-98491680147395" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Post&amp;template=801543530003&amp;key=98491295477220&amp;params=98491680147395" class="w3-menu  ">For Company</a>                     <a id="site-menu-BTM-98495922448088" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Post&amp;template=801543530003&amp;key=98495858708743&amp;params=98495922448088" class="w3-menu  ">For Individual</a>                     <a id="site-menu-BTM-98591095668073" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Category&amp;template=801543530002&amp;key=98591095668073&amp;params=Job" class="w3-menu  ">Join Us</a>                           </div><a id="site-menu-BTM-109035225404681" href="javascript: toggle_menu('BTM', '109035225404681'); void(0);" class="w3-menu  ">Our Products</a><div name="site-submenu-BTM" id="site-submenu-BTM-109035225404681" class="w3-small w3-hide site-submenu-btm">      <a id="site-menu-BTM-109036424547333" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Post&amp;template=801543530003&amp;key=109036291980916&amp;params=109036424547333" class="w3-menu  ">Job Ad</a>                     <a id="site-menu-BTM-90017781708281" href="https://www.mindvan.com/dbs/bdetail?share=cooljobz.test@mindvan.com&amp;dbname=site_Post&amp;template=801543530003&amp;key=90007567793998&amp;params=90017781708281" class="w3-menu  ">CoolJobzHRM</a>                           </div>
+</div>
+</footer>
+
+<div id="mySearch" class="w3-modal" style="display: block; z-index: 15;">
+  <div class="w3-modal-content w3-transparent w3-animate-bottom">
+    <div class="w3-container w3-white w3-round-large">
+      <span onclick="search_close()" class="w3-button w3-circle site-circle w3-display-topright">×</span>
+      <form name="mySearch" class="w3-panel" action="https://www.mindvan.com/dbs/bdetail" onkeypress="if (event.keyCode == 13) { on_progress(); submit_search(); return false; }">
+        <span class="site-nospace"><input type="radio" class="w3-radio" name="search-flag" value="Job" onclick="select_search_type();" checked=""> Job</span>&nbsp; &nbsp;
+        <span class="site-nospace"><input type="radio" class="w3-radio" name="search-flag" value="Employer" onclick="select_search_type();"> Employer</span>&nbsp; &nbsp;
+        <span class="site-nospace"><input type="radio" class="w3-radio" name="search-flag" value="Active" onclick="select_search_type();"> News</span>&nbsp; &nbsp;
+        <span class="site-nospace"><input type="radio" class="w3-radio" name="search-flag" value="Active" onclick="select_search_type();"> Talents</span>&nbsp; &nbsp;
+        <select class="w3-select w3-border-black w3-border-bottom w3-animate-input w3-margin-top doc_input" id="search-category">
+          <option value="">Any Job Category...</option>
+        <option value="3">Recommended Job</option><option value="88742272048107">Accounting and auditing</option><option value="88742272066741">Administration and Human Resources</option><option value="88742272123644">Banking / Finance</option><option value="11">Information Technology</option><option value="88742273081620">Sales / Customer Service / Business Development</option><option value="88742272048107">Accounting and auditing</option><option value="88742272029719">&nbsp;&nbsp;&nbsp;&nbsp;Accounting / Treasury</option><option value="88742272104813">&nbsp;&nbsp;&nbsp;&nbsp;Audit / Tax</option><option value="88742272446849">&nbsp;&nbsp;&nbsp;&nbsp;Enterprise</option><option value="88742272066741">Administration and Human Resources</option><option value="88742272085894">&nbsp;&nbsp;&nbsp;&nbsp;Administrative / Operation</option><option value="88742272275375">&nbsp;&nbsp;&nbsp;&nbsp;Clerical / Reception</option><option value="88742272542939">&nbsp;&nbsp;&nbsp;&nbsp;Human Resources</option><option value="88742273101096">&nbsp;&nbsp;&nbsp;&nbsp;Secretary / Personal Assistant</option><option value="88742273177852">&nbsp;&nbsp;&nbsp;&nbsp;Training and Development</option><option value="88742272123644">Banking / Finance</option><option value="88742272178882">&nbsp;&nbsp;&nbsp;&nbsp;Business / Retail / Private / Investment</option><option value="88742272613042">&nbsp;&nbsp;&nbsp;&nbsp;Internal control</option><option value="88742272666505">&nbsp;&nbsp;&nbsp;&nbsp;Loan / Credit analysis and approval / Mortgage</option><option value="88742273198718">&nbsp;&nbsp;&nbsp;&nbsp;Transactions / Securities</option><option value="90750309385881">Beauty / Health</option><option value="90750685739618">&nbsp;&nbsp;&nbsp;&nbsp;Sports / Leisure</option><option value="90750704454284">&nbsp;&nbsp;&nbsp;&nbsp;Beautician</option><option value="90750720261881">&nbsp;&nbsp;&nbsp;&nbsp;Nutritionist</option><option value="88742272160553">Building / Construction</option><option value="88742272142559">&nbsp;&nbsp;&nbsp;&nbsp;Building</option><option value="90750800831927">&nbsp;&nbsp;&nbsp;&nbsp;Architecture</option><option value="88742272761749">&nbsp;&nbsp;&nbsp;&nbsp;Measurement / Civil / Structural</option><option value="88742272352523">Design</option><option value="88742272464769">&nbsp;&nbsp;&nbsp;&nbsp;Fashion</option><option value="88742272505994">&nbsp;&nbsp;&nbsp;&nbsp;Graphic Design</option><option value="88742272593378">&nbsp;&nbsp;&nbsp;&nbsp;Interior Design</option><option value="88745262127608">&nbsp;&nbsp;&nbsp;&nbsp;Watches / Jewelry</option><option value="88742273239003">&nbsp;&nbsp;&nbsp;&nbsp;Web Design</option><option value="88742272371046">Education</option><option value="88742272819829">&nbsp;&nbsp;&nbsp;&nbsp;Mentor / Teacher / Professor</option><option value="88742272428035">Engineering</option><option value="88742272256791">&nbsp;&nbsp;&nbsp;&nbsp;Chemical industry</option><option value="88742272390382">&nbsp;&nbsp;&nbsp;&nbsp;Electricity / Electronics</option><option value="88742272703893">&nbsp;&nbsp;&nbsp;&nbsp;Manufacturing / Production</option><option value="88742272781707">&nbsp;&nbsp;&nbsp;&nbsp;Mechanical</option><option value="90750367478040">Hotel / Catering</option><option value="90750895055263">&nbsp;&nbsp;&nbsp;&nbsp;Food and Beverage</option><option value="90750916284914">&nbsp;&nbsp;&nbsp;&nbsp;Hotel Service</option><option value="90750951236877">&nbsp;&nbsp;&nbsp;&nbsp;Tourism / Travel Agency</option><option value="11">Information Technology</option><option value="88742272524318">&nbsp;&nbsp;&nbsp;&nbsp;Hardware</option><option value="88742272838252">&nbsp;&nbsp;&nbsp;&nbsp;Mobile / Wireless communications</option><option value="88742272856504">&nbsp;&nbsp;&nbsp;&nbsp;Network / Support</option><option value="88742272927564">&nbsp;&nbsp;&nbsp;&nbsp;Project Management</option><option value="88742273138403">&nbsp;&nbsp;&nbsp;&nbsp;Software Development</option><option value="88742273259016">&nbsp;&nbsp;&nbsp;&nbsp;Webmaster / SEO</option><option value="88744230610458">Insurance</option><option value="88742272574568">&nbsp;&nbsp;&nbsp;&nbsp;Insurance agent / Broker</option><option value="88742272684937">Management</option><option value="88742272486086">&nbsp;&nbsp;&nbsp;&nbsp;General management</option><option value="88742273119960">&nbsp;&nbsp;&nbsp;&nbsp;Senior management</option><option value="89939774169064">Manufacture</option><option value="89939817337212">&nbsp;&nbsp;&nbsp;&nbsp;Apparel / Textile</option><option value="89939875365040">&nbsp;&nbsp;&nbsp;&nbsp;Product Development / Management</option><option value="88742272741775">Marketing / Public Relations</option><option value="88742272722708">&nbsp;&nbsp;&nbsp;&nbsp;Marketing</option><option value="88742273006712">&nbsp;&nbsp;&nbsp;&nbsp;Public Relations</option><option value="88742272800828">Media and advertising</option><option value="90751110237849">&nbsp;&nbsp;&nbsp;&nbsp;Broadcast - TV/Radio</option><option value="88742272315065">&nbsp;&nbsp;&nbsp;&nbsp;Creative / Design</option><option value="90751149351962">&nbsp;&nbsp;&nbsp;&nbsp;Editor / Journalism</option><option value="88742272888702">&nbsp;&nbsp;&nbsp;&nbsp;Photography / Video</option><option value="90751177038491">&nbsp;&nbsp;&nbsp;&nbsp;Print Media</option><option value="90750433780067">Medical</option><option value="90751237703986">&nbsp;&nbsp;&nbsp;&nbsp;Doctor</option><option value="90751254301929">&nbsp;&nbsp;&nbsp;&nbsp;Nursing / Care</option><option value="88742272909400">Professional services</option><option value="88742272198671">&nbsp;&nbsp;&nbsp;&nbsp;Business Consulting</option><option value="88742272295448">&nbsp;&nbsp;&nbsp;&nbsp;Company Secretary</option><option value="88742272648894">&nbsp;&nbsp;&nbsp;&nbsp;Legal</option><option value="88742273218982">&nbsp;&nbsp;&nbsp;&nbsp;Translation</option><option value="88742272947786">Property / Real estate</option><option value="88742272967780">&nbsp;&nbsp;&nbsp;&nbsp;Property Consultants</option><option value="88742272987661">&nbsp;&nbsp;&nbsp;&nbsp;Property Management</option><option value="90750511993217">Government / Social Services</option><option value="90751329150175">&nbsp;&nbsp;&nbsp;&nbsp;Civil servants</option><option value="90751347363890">&nbsp;&nbsp;&nbsp;&nbsp;Social Services / NGO</option><option value="89939281025964">Purchase</option><option value="89939324602123">&nbsp;&nbsp;&nbsp;&nbsp;Clothing</option><option value="89939439270007">&nbsp;&nbsp;&nbsp;&nbsp;Electronics</option><option value="89939505611489">&nbsp;&nbsp;&nbsp;&nbsp;Toys / Watches</option><option value="88742273025616">Research / Laboratory</option><option value="88742272409675">&nbsp;&nbsp;&nbsp;&nbsp;Energy</option><option value="88742272630490">&nbsp;&nbsp;&nbsp;&nbsp;Laboratory</option><option value="88742273044249">&nbsp;&nbsp;&nbsp;&nbsp;Research and Development</option><option value="88742273081620">Sales / Customer Service / Business Development</option><option value="88742272011081">&nbsp;&nbsp;&nbsp;&nbsp;Account Services</option><option value="88742272218687">&nbsp;&nbsp;&nbsp;&nbsp;Business Development</option><option value="88742272238322">&nbsp;&nbsp;&nbsp;&nbsp;Channel / Distribution</option><option value="88742272333635">&nbsp;&nbsp;&nbsp;&nbsp;Customer Service</option><option value="88742273062887">&nbsp;&nbsp;&nbsp;&nbsp;Retail</option><option value="88742273157666">&nbsp;&nbsp;&nbsp;&nbsp;Telemarketing</option><option value="88742273280052">&nbsp;&nbsp;&nbsp;&nbsp;Wholesale</option><option value="90750555640833">Transportation / Logistic</option><option value="90751419200857">&nbsp;&nbsp;&nbsp;&nbsp;Aviation</option><option value="90751439243217">&nbsp;&nbsp;&nbsp;&nbsp;Freight</option><option value="90751461241786">&nbsp;&nbsp;&nbsp;&nbsp;Inventory / Warehouse</option><option value="90751479281023">&nbsp;&nbsp;&nbsp;&nbsp;Shipping</option><option value="90751507050257">&nbsp;&nbsp;&nbsp;&nbsp;Transportation</option><option value="88020923215666">Other</option><option value="90751594518160">&nbsp;&nbsp;&nbsp;&nbsp;Agriculture / Forestry / Fisheries</option><option value="90751627158195">&nbsp;&nbsp;&nbsp;&nbsp;Entertainment - Artist / Singer / Musician</option><option value="90751646370720">&nbsp;&nbsp;&nbsp;&nbsp;Security</option><option value="90751675496963">&nbsp;&nbsp;&nbsp;&nbsp;Student / Graduate / No experience</option><option value="90751707884094">&nbsp;&nbsp;&nbsp;&nbsp;Technician</option><option value="90751765078264">&nbsp;&nbsp;&nbsp;&nbsp;Trading</option></select>
+        
+        <select class="w3-select w3-border-black w3-border-bottom w3-animate-input w3-margin-top doc_input" id="search-location">
+          <option value="">Any Location...</option>
+        <option value="6">Hong Kong</option><option value="84589660097957">Japan</option><option value="7">Taiwan</option><option value="8">Cambodia</option><option value="9">Singapore</option><option value="88020869413409">UK</option><option value="88020883048761">China</option><option value="91780884393455">Bangladesh</option><option value="93683909360354">India</option><option value="88020836996040">USA</option><option value="93724740092753">Netherlands</option><option value="93723321836316">Poland</option><option value="90096758751010">Vietnam</option><option value="94156018167009">Philippines</option><option value="94506105698149">Belgium</option><option value="94764553150924">Australia</option><option value="95473571064737">South Africa</option><option value="95974680385655">Korea</option></select>
+        
+        <select class="w3-select w3-border-black w3-border-bottom w3-animate-input w3-margin-top w3-hide doc_input" id="search-industry">
+          <option value="">Any Industry...</option>
+        <option value="86555632061031">Premium Employer</option><option value="88764836752249">Banking / Finance</option><option value="88764491317706">Education and Training</option><option value="88764491337888">Human Resource Management / Consultants</option><option value="88764734221015">Information Technology</option><option value="88764889747013">Insurance</option><option value="88764491382671">Manufacturing - Electronics / Toys / Clothing / Other</option><option value="89941006587999">Marketing / Advertising / Public Relations</option><option value="88764491401731">Property / Security</option><option value="88764491420196">Retail / Wholesale</option><option value="88764491438708">Telecommunications</option><option value="88764491456778">Transport</option><option value="88765207819443">Other</option></select>
+        
+        <select class="w3-select w3-border-black w3-border-bottom w3-animate-input w3-margin-top doc_input" id="search-mbti">
+            <option value="">Any Personality Type...</option>
+          <option value="86555632061031">ISTJ</option><option value="88764836752249"> ISFJ</option><option value="88764491317706">INFJ</option><option value="88764491337888">INTJ</option><option value="88764734221015">ISTP</option><option value="88764889747013">ISFP</option><option value="88764491382671">INFP</option><option value="89941006587999">INTP</option><option value="88764491401731">ESTP</option><option value="88764491420196">ESFP</option><option value="88764491438708">ENFP</option><option value="88764491456778">ENTP</option><option value="88765207819443">ESTJ</option><option value="88765207819443">ESFJ</option><option value="88765207819443">ENFJ</option><option value="88765207819443">ENTJ</option></select>
+        
+          <div class="site-search-salary">Salary 
+          <select id="search-salary-currency">
+            <option value="HKD" selected="">HKD</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="SGD">SGD</option>
+            <option value="TWD">TWD</option>
+            <option value="JPY">JPY</option>
+            <option value="CNY">CNY</option>
+          </select>
+          <span id="salary-from-text">1,000</span> - <span id="salary-to-text">100,000</span> Per Month
+        </div>
+        <div class="site-multi-range">
+          <hr id="search-salary-bar">
+          <input type="range" min="0" max="200000" step="500" value="1000" id="search-salary-from" onchange="update_range_value(this,'salary-from-text',true);">
+          <input type="range" min="0" max="200000" step="500" value="100000" id="search-salary-to" onchange="update_range_value(this,'salary-to-text',true);">
+        </div>
+        <input class="w3-input w3-border-black w3-border-bottom w3-animate-input doc_input" placeholder="Enter keyword..." id="search-text">
+        <a class="w3-button w3-margin-top w3-black w3-round-xxlarge" href="INFP.html"><i class="fa fa-search"></i> Search</a>
+        <input type="hidden" name="nval0" value="">
+        <input type="hidden" name="share" value="cooljobz.test@mindvan.com">
+        <input type="hidden" name="dbname" value="NONE">
+        <input type="hidden" name="action" value="NONE,801543530031,,AllJb">
+        <input type="hidden" name="caller" value="https://www.mindvan.com/dbs/bdetail">
+        <input type="hidden" name="params" value="dtlprs">
+        <input type="hidden" name="template" value="801543530024">
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="appSearch" class="w3-modal">
+  <div class="w3-modal-content w3-transparent w3-animate-bottom">
+    <div class="w3-container w3-white w3-round-large">
+      <span onclick="app_search_close()" class="w3-button w3-circle site-circle w3-display-topright">×</span>
+      <form name="appSearch" class="w3-panel" action="https://www.mindvan.com/dbs/bdetail" onkeypress="if (event.keyCode == 13) { on_progress(); submit_app_search(); return false; }">
+        <select class="w3-select w3-border-black w3-border-bottom w3-animate-input w3-margin-top doc_input" id="search-app-employer">
+          <option value=""></option>
+        </select>
+        <select class="w3-select w3-border-black w3-border-bottom w3-animate-input w3-margin-top doc_input" id="search-app-seeker">
+          <option value=""></option>
+        </select>
+        <select class="w3-select w3-border-black w3-border-bottom w3-animate-input w3-margin-top doc_input" id="search-app-job">
+          <option value=""></option>
+        </select>
+        <select class="w3-select w3-border-black w3-border-bottom w3-animate-input w3-margin-top doc_input" id="search-app-status">
+          <option value="">Any status...</option>
+          
+<option value="273397330004">✖ CANCELLED</option>
+<option value="801333330007">🔵 UPLOADED</option>
+<option value="801543530001">🔵 NEW</option>
+<option value="801543530002">🔷 1ST INTERVIEW DONE</option>
+<option value="801543530003">🔷 2ND INTERVIEW DONE</option>
+<option value="801543530004">🔶 RECOMMENDED</option>
+<option value="801543530005">🔸 CONSIDERED</option>
+<option value="801543530006">❌ NOT EMPLOYED</option>
+<option value="801543530007">✅ EMPLOYED</option>
+
+        </select>
+        <input class="w3-input w3-border-black w3-border-bottom w3-animate-input doc_input" placeholder="Date from..." name="search-app-start" id="search-app-start">
+          <a id="input_search-app-start" class="NIL" href='javascript: show_calendar("input_search-app-start", "search-app-start", 0, "yyyy/mm/dd");'><i class="fa fa-calendar"></i></a>
+        <input class="w3-input w3-border-black w3-border-bottom w3-animate-input doc_input" placeholder="Date to..." name="search-app-end" id="search-app-end">
+          <a id="input_search-app-end" class="NIL" href='javascript: show_calendar("input_search-app-end", "search-app-end", 0, "yyyy/mm/dd");'><i class="fa fa-calendar"></i></a>
+        <input class="w3-input w3-border-black w3-border-bottom w3-animate-input doc_input" placeholder="Enter keyword..." id="search-app-text">
+        <a class="w3-button w3-margin-top w3-black w3-round-xxlarge" href="javascript: on_progress(); submit_app_search(); void(0);"><i class="fa fa-search"></i> Search</a>
+        <input type="hidden" id="search-app-flag" value="">
+        <input type="hidden" name="nval0" value="">
+        <input type="hidden" name="nval1" value="">
+        <input type="hidden" name="share" value="cooljobz.test@mindvan.com">
+        <input type="hidden" name="dbname" value="NONE">
+        <input type="hidden" name="action" value="NONE,801543530031,,AllJb">
+        <input type="hidden" name="caller" value="https://www.mindvan.com/dbs/bdetail">
+        <input type="hidden" name="params" value="dtlprs">
+        <input type="hidden" name="template" value="801543530038">
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="hrmSearch" class="w3-modal">
+  <div class="w3-modal-content w3-transparent w3-animate-bottom">
+    <div class="w3-container w3-white w3-round-large">
+      <span onclick="hrm_search_close()" class="w3-button w3-circle site-circle w3-display-topright">×</span>
+      <form name="hrmSearch" class="w3-panel" action="https://www.mindvan.com/dbs/bdetail" onkeypress="if (event.keyCode == 13) { on_progress(); submit_hrm_search(); return false; }">
+        <select class="w3-select w3-border-black w3-border-bottom w3-animate-input w3-margin-top w3-hide doc_input" id="search-hrm-employer-employee">
+          <option value=""></option>
+        </select>
+        <select class="w3-select w3-border-black w3-border-bottom w3-animate-input w3-margin-top w3-hide doc_input" id="search-hrm-employer">
+          <option value=""></option>
+        </select>
+        <select class="w3-select w3-border-black w3-border-bottom w3-animate-input w3-margin-top w3-hide doc_input" id="search-hrm-employee">
+          <option value=""></option>
+        </select>
+        <select class="w3-select w3-border-black w3-border-bottom w3-animate-input w3-margin-top w3-hide doc_input" id="search-hrm-job">
+          <option value=""></option>
+        </select>
+        <select class="w3-select w3-border-black w3-border-bottom w3-animate-input w3-margin-top w3-hide doc_input" id="search-hrm-type">
+          <option value="">Any type...</option>
+        </select>
+        <select class="w3-select w3-border-black w3-border-bottom w3-animate-input w3-margin-top w3-hide doc_input" id="search-hrm-status">
+          <option value="">Any status...</option>
+          
+<option value="801333330001">🔷 Applied</option>
+<option value="801333330002">🔷 Re-opened</option>
+<option value="801333330003">✅ Approved</option>
+<option value="801333330004">❌ Rejected</option>
+<option value="801333330005">🔹 Re-applied</option>
+<option value="801333330008">💱 New Payment</option>
+<option value="801333330009">💲 Paid</option>
+<option value="801333330010">➡ Checked-in</option>
+<option value="801333330011">✔ Checked-out</option>
+
+        </select>
+        <input class="w3-input w3-border-black w3-border-bottom w3-animate-input doc_input" name="search-hrm-start" id="search-hrm-start">
+          <a id="input_search-hrm-start" class="NIL" href='javascript: show_calendar("input_search-hrm-start", "search-hrm-start", 0, "yyyy/mm/dd");'><i class="fa fa-calendar"></i></a>
+        <input class="w3-input w3-border-black w3-border-bottom w3-animate-input doc_input" name="search-hrm-end" id="search-hrm-end">
+          <a id="input_search-hrm-end" class="NIL" href='javascript: show_calendar("input_search-hrm-end", "search-hrm-end", 0, "yyyy/mm/dd");'><i class="fa fa-calendar"></i></a>
+        <input class="w3-input w3-border-black w3-border-bottom w3-animate-input doc_input" placeholder="Enter keyword..." id="search-hrm-text">
+        <a class="w3-button w3-margin-top w3-black w3-round-xxlarge" href="javascript: on_progress(); submit_hrm_search(); void(0);"><i class="fa fa-search"></i> Search</a>
+        <input type="hidden" id="search-hrm-flag" value="">
+        <input type="hidden" name="nval0" value="">
+        <input type="hidden" name="nval1" value="">
+        <input type="hidden" name="share" value="cooljobz.test@mindvan.com">
+        <input type="hidden" name="dbname" value="NONE">
+        <input type="hidden" name="action" value="NONE,801543530031,,AllJb">
+        <input type="hidden" name="caller" value="https://www.mindvan.com/dbs/bdetail">
+        <input type="hidden" name="params" value="dtlprs">
+        <input type="hidden" name="template" value="801543530061">
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="myAttention" class="w3-modal">
+  <div class="w3-modal-content w3-transparent w3-animate-left">
+    <div class="w3-container w3-amber w3-round-large">
+      <span onclick="attention_close()" class="w3-button w3-circle site-circle w3-display-topright" id="attention-close">×</span>
+      <div class="w3-panel">
+        <h4 id="attention-title"></h4>
+        <p id="attention-description"></p>
+        <div id="attention-content"></div>
+        <p><a class="w3-button w3-black w3-round-xxlarge" href="" id="attention-action"></a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="myAction" class="w3-button w3-amber w3-round-xxlarge w3-hover-amber w3-animate-zoom w3-card site-call-for-action site-pointer">What's CoolJobz HRM?</div>
+
+<div id="modalpay" class="w3-modal">
+  <div class="w3-modal-content w3-animate-bottom w3-round-large">
+    <div id="modalpay-close" class="w3-button w3-circle w3-display-topright site-circle" onclick="checkout_close();">×</div>
+    <div id="modalpay-content" class="w3-padding">
+      <form action="" method="post" id="payment-form" class="w3-section">
+        <h4 id="payment-item-total"></h4>
+        <div class="form-row">
+          <label for="cardholder-name">
+            Card-Holder Name
+          </label>
+          <div class="w3-margin-bottom">
+            <input class="w3-input w3-border-black w3-border-bottom w3-animate-input doc_input" id="cardholder-name" type="text">
+          </div>
+          <label for="card-element">
+            Card No.
+          </label>
+          <div id="card-element" class="w3-input w3-border-black w3-border-bottom">
+            <!-- A Stripe Element will be inserted here. -->
+          </div>
+          <div id="card-errors" role="alert"></div>
+        </div>
+        <i class="fa fa-cc-visa"></i> <i class="fa fa-cc-mastercard"></i> <i class="fa fa-cc-amex"></i> <i class="fa fa-cc-diners-club"></i>
+        <i class="fa fa-cc-discover"></i> <i class="fa fa-cc-jcb"></i><br>
+        <button class="w3-button w3-lime w3-hover-lime w3-margin-top w3-round" id="card-button" data-secret=""><i class="fa fa-cc-stripe"></i> Checkout</button>
+        <div id="apple-pay" class="w3-margin-top"></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+</body></html>
